@@ -30,7 +30,7 @@ const Footer = () => {
               Unternehmen bewerben sich bei talentierten Schülern.
             </p>
             <div className="text-sm">
-              <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-8 space-y-2 xl:space-y-0 text-foreground">
+              <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-8 space-y-2 xl:space-y-0 text-foreground dark:text-white">
                 <div className="flex items-center space-x-2 whitespace-nowrap">
                   <MapPin size={16} className="text-jimmy-gold flex-shrink-0" />
                   <span>Königsmoos, Bayern</span>
