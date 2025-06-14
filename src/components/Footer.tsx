@@ -6,7 +6,7 @@ import { Button } from './ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-muted/50 to-background border-t border-border/40">
+    <footer className="bg-gradient-to-br from-muted/50 to-background border-t border-border/40 dark:bg-[#333]">
       <div className="container mx-auto px-4 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -30,10 +30,19 @@ const Footer = () => {
               Unternehmen bewerben sich bei talentierten Schülern.
             </p>
             <div className="text-sm">
-              <div className="flex flex-col md:flex-row md:items-center md:space-x-8 space-y-1 md:space-y-0 text-foreground">
-                <span>Königsmoos, Bayern</span>
-                <span>info@jimmy-portal.de</span>
-                <span>+49 (0) 123 456789</span>
+              <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 space-y-2 lg:space-y-0 text-foreground">
+                <div className="flex items-center space-x-2">
+                  <MapPin size={16} className="text-jimmy-gold" />
+                  <span>Königsmoos, Bayern</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail size={16} className="text-jimmy-gold" />
+                  <span>info@jimmy-portal.de</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Phone size={16} className="text-jimmy-gold" />
+                  <span>+49 (0) 123 456789</span>
+                </div>
               </div>
             </div>
           </motion.div>

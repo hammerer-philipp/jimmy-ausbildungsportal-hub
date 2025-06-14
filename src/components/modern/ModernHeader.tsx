@@ -12,7 +12,7 @@ export const ModernHeader = () => {
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/40"
+      className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/40 dark:bg-[#333]/80"
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
