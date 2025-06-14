@@ -129,105 +129,166 @@ export const HeroSection = () => {
           >
             {/* Phone Frame */}
             <div className="relative">
-              {/* Phone Outline */}
-              <div className="w-64 h-[500px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-[3rem] p-2 shadow-2xl">
-                {/* Screen */}
-                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden relative">
-                  {/* Status Bar */}
-                  <div className="h-8 bg-gradient-to-r from-jimmy-gold to-yellow-400 flex items-center justify-between px-4">
-                    <span className="text-xs font-semibold text-jimmy-header">Jimmy</span>
-                    <div className="flex items-center space-x-1">
-                      <div className="w-1 h-1 bg-jimmy-header rounded-full"></div>
-                      <div className="w-1 h-1 bg-jimmy-header rounded-full"></div>
-                      <div className="w-1 h-1 bg-jimmy-header rounded-full"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Animated Content */}
-                  <div className="relative h-full overflow-hidden">
-                    {/* Screen 1: Profile Creation */}
-                    <motion.div
-                      initial={{ opacity: 1 }}
-                      animate={{ 
-                        opacity: [1, 1, 0, 0, 0, 0, 1],
-                        x: [0, 0, -100, -100, -100, -100, 0]
-                      }}
-                      transition={{ duration: 6, repeat: Infinity }}
-                      className="absolute inset-0 p-4 bg-gradient-to-b from-blue-50 to-white"
-                    >
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-jimmy-gold rounded-full mx-auto mb-3 flex items-center justify-center">
-                          <span className="text-white text-xl">👤</span>
-                        </div>
-                        <h3 className="text-sm font-bold mb-2">Profil erstellen</h3>
-                        <div className="space-y-2">
-                          <div className="h-3 bg-gray-200 rounded w-3/4 mx-auto"></div>
-                          <div className="h-3 bg-gray-200 rounded w-1/2 mx-auto"></div>
+              {/* Phone Outline with realistic styling */}
+              <div className="w-72 h-[580px] bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 rounded-[3.5rem] p-3 shadow-2xl border-2 border-gray-700 dark:border-gray-600">
+                {/* Screen with realistic bezel */}
+                <div className="w-full h-full bg-black rounded-[3rem] p-1">
+                  <div className="w-full h-full bg-white dark:bg-gray-900 rounded-[2.8rem] overflow-hidden relative">
+                    {/* Status Bar - realistic iPhone style */}
+                    <div className="h-12 bg-white dark:bg-gray-900 flex items-center justify-between px-6 pt-2">
+                      <div className="flex items-center space-x-1">
+                        <div className="text-xs font-medium text-black dark:text-white">9:41</div>
+                      </div>
+                      <div className="flex items-center space-x-1">
+                        <div className="w-4 h-2 border border-black dark:border-white rounded-sm">
+                          <div className="w-3 h-1 bg-green-500 rounded-sm mt-0.5 ml-0.5"></div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
+                    
+                    {/* Dynamic Island / Notch */}
+                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-black rounded-full"></div>
+                    
+                    {/* Animated Content - realistic app screens */}
+                    <div className="relative h-full overflow-hidden pt-8">
+                      {/* Screen 1: Login/Welcome Screen */}
+                      <motion.div
+                        initial={{ opacity: 1 }}
+                        animate={{ 
+                          opacity: [1, 1, 1, 0, 0, 0, 0, 1],
+                          x: [0, 0, 0, -100, -100, -100, -100, 0]
+                        }}
+                        transition={{ duration: 8, repeat: Infinity }}
+                        className="absolute inset-0 px-6 py-4 bg-white dark:bg-gray-900"
+                      >
+                        <div className="text-center mt-8">
+                          {/* App Header */}
+                          <div className="flex items-center justify-center mb-8">
+                            <div className="w-12 h-12 bg-gradient-to-r from-jimmy-gold to-yellow-400 rounded-xl flex items-center justify-center shadow-lg">
+                              <span className="text-jimmy-header font-bold text-lg">J</span>
+                            </div>
+                            <h1 className="ml-3 text-xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-400 bg-clip-text text-transparent">Jimmy</h1>
+                          </div>
+                          
+                          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Willkommen zurück!</h2>
+                          <p className="text-sm text-gray-600 dark:text-gray-400 mb-8">Finde deinen Traumjob</p>
+                          
+                          {/* Mock Login Form */}
+                          <div className="space-y-3">
+                            <div className="h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center px-4">
+                              <div className="w-3 h-3 bg-gray-400 rounded-full mr-3"></div>
+                              <div className="text-sm text-gray-500">E-Mail eingeben</div>
+                            </div>
+                            <div className="h-12 bg-gradient-to-r from-jimmy-gold to-yellow-400 rounded-lg flex items-center justify-center">
+                              <span className="text-jimmy-header font-semibold">Anmelden</span>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
 
-                    {/* Screen 2: Company Applications */}
-                    <motion.div
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={{ 
-                        opacity: [0, 0, 1, 1, 0, 0, 0],
-                        x: [100, 100, 0, 0, -100, -100, 100]
-                      }}
-                      transition={{ duration: 6, repeat: Infinity }}
-                      className="absolute inset-0 p-4 bg-gradient-to-b from-green-50 to-white"
-                    >
-                      <div>
-                        <h3 className="text-sm font-bold mb-3 text-center">Bewerbungen erhalten</h3>
-                        <div className="space-y-2">
-                          <motion.div 
-                            animate={{ scale: [1, 1.02, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                            className="bg-white border border-jimmy-gold/30 rounded-lg p-2"
-                          >
-                            <div className="flex items-center space-x-2">
-                              <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
-                              <div>
-                                <div className="text-xs font-semibold">BMW Group</div>
-                                <div className="text-xs text-gray-500">Mechatroniker</div>
+                      {/* Screen 2: Dashboard with job offers */}
+                      <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ 
+                          opacity: [0, 0, 0, 1, 1, 1, 0, 0],
+                          x: [100, 100, 100, 0, 0, 0, -100, -100]
+                        }}
+                        transition={{ duration: 8, repeat: Infinity }}
+                        className="absolute inset-0 px-6 py-4 bg-gray-50 dark:bg-gray-800"
+                      >
+                        <div>
+                          {/* Header with notifications */}
+                          <div className="flex items-center justify-between mb-6">
+                            <div>
+                              <h2 className="text-lg font-bold text-gray-900 dark:text-white">Dashboard</h2>
+                              <p className="text-sm text-gray-600 dark:text-gray-400">3 neue Bewerbungen</p>
+                            </div>
+                            <div className="relative">
+                              <div className="w-8 h-8 bg-jimmy-gold rounded-full"></div>
+                              <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+                                <span className="text-white text-xs">3</span>
                               </div>
                             </div>
-                          </motion.div>
-                          <div className="bg-white border border-gray-200 rounded-lg p-2">
-                            <div className="flex items-center space-x-2">
-                              <div className="w-8 h-8 bg-red-500 rounded-full"></div>
-                              <div>
-                                <div className="text-xs font-semibold">Siemens AG</div>
-                                <div className="text-xs text-gray-500">IT-Spezialist</div>
+                          </div>
+                          
+                          {/* Job Cards */}
+                          <div className="space-y-3">
+                            <motion.div 
+                              animate={{ scale: [1, 1.02, 1] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                              className="bg-white dark:bg-gray-700 border border-jimmy-gold/30 rounded-xl p-4 shadow-sm"
+                            >
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center space-x-3">
+                                  <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                                    <span className="text-white font-bold text-sm">BMW</span>
+                                  </div>
+                                  <div>
+                                    <div className="text-sm font-semibold text-gray-900 dark:text-white">BMW Group</div>
+                                    <div className="text-xs text-gray-500 dark:text-gray-400">Mechatroniker (m/w/d)</div>
+                                  </div>
+                                </div>
+                                <div className="text-right">
+                                  <div className="text-xs text-jimmy-gold font-semibold">NEU</div>
+                                  <div className="text-xs text-gray-400">vor 2h</div>
+                                </div>
+                              </div>
+                            </motion.div>
+                            
+                            <div className="bg-white dark:bg-gray-700 rounded-xl p-4 shadow-sm">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center space-x-3">
+                                  <div className="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center">
+                                    <span className="text-white font-bold text-xs">SIE</span>
+                                  </div>
+                                  <div>
+                                    <div className="text-sm font-semibold text-gray-900 dark:text-white">Siemens AG</div>
+                                    <div className="text-xs text-gray-500 dark:text-gray-400">IT-Spezialist (m/w/d)</div>
+                                  </div>
+                                </div>
+                                <div className="text-xs text-gray-400">vor 1d</div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </motion.div>
+                      </motion.div>
 
-                    {/* Screen 3: Success */}
-                    <motion.div
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={{ 
-                        opacity: [0, 0, 0, 0, 1, 1, 0],
-                        x: [100, 100, 100, 100, 0, 0, -100]
-                      }}
-                      transition={{ duration: 6, repeat: Infinity }}
-                      className="absolute inset-0 p-4 bg-gradient-to-b from-jimmy-gold/20 to-white flex items-center justify-center"
-                    >
-                      <div className="text-center">
-                        <motion.div
-                          animate={{ scale: [1, 1.1, 1] }}
-                          transition={{ duration: 1, repeat: Infinity }}
-                          className="text-4xl mb-3"
-                        >
-                          🎉
-                        </motion.div>
-                        <h3 className="text-sm font-bold text-jimmy-gold">Ausbildungsplatz gefunden!</h3>
-                        <p className="text-xs text-gray-600 mt-1">Herzlichen Glückwunsch!</p>
-                      </div>
-                    </motion.div>
+                      {/* Screen 3: Success/Match Screen */}
+                      <motion.div
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ 
+                          opacity: [0, 0, 0, 0, 0, 0, 1, 1],
+                          x: [100, 100, 100, 100, 100, 100, 0, 0]
+                        }}
+                        transition={{ duration: 8, repeat: Infinity }}
+                        className="absolute inset-0 px-6 py-4 bg-gradient-to-b from-jimmy-gold/10 to-green-50 dark:from-jimmy-gold/20 dark:to-green-900/20 flex items-center justify-center"
+                      >
+                        <div className="text-center">
+                          <motion.div
+                            animate={{ 
+                              scale: [1, 1.2, 1],
+                              rotate: [0, 5, -5, 0]
+                            }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                            className="text-6xl mb-4"
+                          >
+                            🎉
+                          </motion.div>
+                          <h3 className="text-xl font-bold text-jimmy-gold mb-2">Perfect Match!</h3>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">BMW möchte dich kennenlernen</p>
+                          <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+                            <div className="flex items-center space-x-3 mb-3">
+                              <div className="w-8 h-8 bg-blue-500 rounded-lg"></div>
+                              <div className="text-left">
+                                <div className="text-sm font-semibold text-gray-900 dark:text-white">BMW Group</div>
+                                <div className="text-xs text-gray-500">München</div>
+                              </div>
+                            </div>
+                            <div className="text-xs text-green-600 dark:text-green-400 font-semibold">✓ Bewerbung akzeptiert</div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
