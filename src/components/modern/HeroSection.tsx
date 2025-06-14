@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import { ArrowRight, Play, Users, Building2, Trophy } from 'lucide-react';
-import { Scene3D } from '../3d/Scene3D';
 
 export const HeroSection = () => {
   return (
@@ -9,9 +8,10 @@ export const HeroSection = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/50 to-jimmy-gold/5" />
       
-      {/* 3D Scene Background */}
-      <div className="absolute inset-0 opacity-20">
-        <Scene3D />
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-jimmy-gold/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -127,8 +127,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-96 w-full">
-              <Scene3D />
+            <div className="relative h-96 w-full bg-gradient-to-br from-jimmy-gold/20 to-yellow-400/20 rounded-3xl flex items-center justify-center">
+              <div className="text-6xl">🚀</div>
             </div>
             
             {/* Floating cards */}
