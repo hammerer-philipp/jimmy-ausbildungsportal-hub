@@ -35,80 +35,96 @@ const Preise = () => {
       <Header />
       
       <main className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Preise & Pakete</h1>
-          <p className="text-xl text-jimmy-gold/80 max-w-2xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-jimmy-gold to-yellow-300 bg-clip-text text-transparent">
+            Preise & Pakete
+          </h1>
+          <p className="text-xl text-jimmy-gold/90 max-w-3xl mx-auto leading-relaxed">
             Transparente Preise für Schüler und Unternehmen. Keine versteckten Kosten, keine Überraschungen.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Schüler Preismodell */}
-          <Card className="bg-jimmy-header border-jimmy-gold/20 relative">
-            <CardHeader className="text-center pb-8">
-              <div className="flex justify-center items-center mb-4">
-                <Users size={48} className="text-jimmy-gold" />
+          <Card className="bg-gradient-to-br from-jimmy-header to-jimmy-header/80 border-jimmy-gold/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-jimmy-gold/10 rounded-full -translate-y-16 translate-x-16"></div>
+            <CardHeader className="text-center pb-8 relative z-10">
+              <div className="flex justify-center items-center mb-6 relative">
+                <div className="bg-jimmy-gold/20 rounded-full p-4">
+                  <Users size={56} className="text-jimmy-gold" />
+                </div>
               </div>
-              <CardTitle className="text-jimmy-gold text-3xl mb-2">Für Schüler</CardTitle>
-              <div className="text-center">
-                <span className="text-5xl font-bold text-jimmy-gold">Kostenlos</span>
-                <p className="text-jimmy-gold/60 mt-2">Für immer kostenlos</p>
+              <CardTitle className="text-jimmy-gold text-4xl mb-4 font-bold">Für Schüler</CardTitle>
+              <div className="text-center mb-4">
+                <span className="text-6xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-300 bg-clip-text text-transparent">
+                  Kostenlos
+                </span>
+                <p className="text-jimmy-gold/70 mt-3 text-lg">Für immer kostenlos</p>
               </div>
-              <Badge className="bg-jimmy-gold text-jimmy-header font-semibold mx-auto">
-                Beliebt bei Schülern
+              <Badge className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header font-bold px-4 py-2 rounded-full mx-auto shadow-lg">
+                ⭐ Beliebt bei Schülern
               </Badge>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-4 mb-8">
+            <CardContent className="relative z-10">
+              <ul className="space-y-5 mb-10">
                 {schuelerFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <Check size={20} className="text-jimmy-gold mt-0.5 flex-shrink-0" />
-                    <span className="text-jimmy-gold/80">{feature}</span>
+                  <li key={index} className="flex items-start space-x-4 group">
+                    <div className="bg-jimmy-gold/20 rounded-full p-1 group-hover:bg-jimmy-gold/30 transition-colors">
+                      <Check size={18} className="text-jimmy-gold" />
+                    </div>
+                    <span className="text-jimmy-gold/90 group-hover:text-jimmy-gold transition-colors">{feature}</span>
                   </li>
                 ))}
               </ul>
               
-              <Button className="w-full bg-jimmy-gold text-jimmy-header hover:bg-yellow-400 font-semibold py-3">
-                Kostenlos registrieren
+              <Button className="w-full bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold font-bold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                🚀 Kostenlos registrieren
               </Button>
               
-              <p className="text-center text-sm text-jimmy-gold/60 mt-4">
-                Keine Kreditkarte erforderlich
+              <p className="text-center text-sm text-jimmy-gold/60 mt-4 font-medium">
+                ✅ Keine Kreditkarte erforderlich
               </p>
             </CardContent>
           </Card>
 
           {/* Unternehmen Preismodell */}
-          <Card className="bg-jimmy-header border-jimmy-gold/20 relative">
-            <CardHeader className="text-center pb-8">
-              <div className="flex justify-center items-center mb-4">
-                <Building size={48} className="text-jimmy-gold" />
+          <Card className="bg-gradient-to-br from-jimmy-header to-jimmy-header/80 border-jimmy-gold/30 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-jimmy-gold/10 rounded-full -translate-y-16 -translate-x-16"></div>
+            <CardHeader className="text-center pb-8 relative z-10">
+              <div className="flex justify-center items-center mb-6 relative">
+                <div className="bg-jimmy-gold/20 rounded-full p-4">
+                  <Building size={56} className="text-jimmy-gold" />
+                </div>
               </div>
-              <CardTitle className="text-jimmy-gold text-3xl mb-2">Für Unternehmen</CardTitle>
-              <div className="text-center">
-                <span className="text-5xl font-bold text-jimmy-gold">600€</span>
-                <p className="text-jimmy-gold/60 mt-2">pro Jahr</p>
+              <CardTitle className="text-jimmy-gold text-4xl mb-4 font-bold">Für Unternehmen</CardTitle>
+              <div className="text-center mb-4">
+                <span className="text-6xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-300 bg-clip-text text-transparent">
+                  600€
+                </span>
+                <p className="text-jimmy-gold/70 mt-3 text-lg">pro Jahr</p>
               </div>
-              <Badge className="bg-jimmy-gold text-jimmy-header font-semibold mx-auto">
-                Professionell
+              <Badge className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header font-bold px-4 py-2 rounded-full mx-auto shadow-lg">
+                💼 Professionell
               </Badge>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-4 mb-8">
+            <CardContent className="relative z-10">
+              <ul className="space-y-5 mb-10">
                 {unternehmenFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <Check size={20} className="text-jimmy-gold mt-0.5 flex-shrink-0" />
-                    <span className="text-jimmy-gold/80">{feature}</span>
+                  <li key={index} className="flex items-start space-x-4 group">
+                    <div className="bg-jimmy-gold/20 rounded-full p-1 group-hover:bg-jimmy-gold/30 transition-colors">
+                      <Check size={18} className="text-jimmy-gold" />
+                    </div>
+                    <span className="text-jimmy-gold/90 group-hover:text-jimmy-gold transition-colors">{feature}</span>
                   </li>
                 ))}
               </ul>
               
-              <Button className="w-full bg-jimmy-gold text-jimmy-header hover:bg-yellow-400 font-semibold py-3">
-                Jetzt starten
+              <Button className="w-full bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold font-bold py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                🚀 Jetzt starten
               </Button>
               
-              <p className="text-center text-sm text-jimmy-gold/60 mt-4">
-                14 Tage kostenlos testen
+              <p className="text-center text-sm text-jimmy-gold/60 mt-4 font-medium">
+                🎯 14 Tage kostenlos testen
               </p>
             </CardContent>
           </Card>
