@@ -30,17 +30,19 @@ const Footer = () => {
               Unternehmen bewerben sich bei talentierten Schülern.
             </p>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <MapPin size={16} className="text-jimmy-gold" />
-                <span>Königsmoos, Bayern</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <Mail size={16} className="text-jimmy-gold" />
-                <span>info@jimmy-portal.de</span>
-              </div>
-              <div className="flex items-center space-x-2 text-muted-foreground">
-                <Phone size={16} className="text-jimmy-gold" />
-                <span>+49 (0) 123 456789</span>
+              <div className="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+                <div className="flex items-center space-x-2 text-foreground">
+                  <MapPin size={16} className="text-jimmy-gold" />
+                  <span>Königsmoos, Bayern</span>
+                </div>
+                <div className="flex items-center space-x-2 text-foreground">
+                  <Mail size={16} className="text-jimmy-gold" />
+                  <span>info@jimmy-portal.de</span>
+                </div>
+                <div className="flex items-center space-x-2 text-foreground">
+                  <Phone size={16} className="text-jimmy-gold" />
+                  <span>+49 (0) 123 456789</span>
+                </div>
               </div>
             </div>
           </motion.div>
