@@ -99,19 +99,25 @@ export const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group text-lg px-8 py-6"
+                asChild
               >
-                <Users className="mr-2 h-5 w-5" />
-                Als Schüler starten
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  <Users className="mr-2 h-5 w-5" />
+                  Als Schüler starten
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-jimmy-gold/30 text-foreground hover:bg-jimmy-gold/10 group text-lg px-8 py-6"
+                asChild
               >
-                <Building2 className="mr-2 h-5 w-5" />
-                Für Unternehmen
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  <Building2 className="mr-2 h-5 w-5" />
+                  Als Unternehmen starten
+                </a>
               </Button>
             </motion.div>
 
