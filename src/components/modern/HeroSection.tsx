@@ -70,12 +70,12 @@ export const HeroSection = () => {
                 <div className="text-sm text-muted-foreground">Schüler</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-jimmy-gold">15+</div>
+                <div className="text-2xl font-bold text-jimmy-gold">5+</div>
                 <div className="text-sm text-muted-foreground">Unternehmen</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-jimmy-gold">95%</div>
-                <div className="text-sm text-muted-foreground">Erfolgsquote</div>
+                <div className="text-2xl font-bold text-jimmy-gold">&lt; 2 Tage</div>
+                <div className="text-sm text-muted-foreground">Ø Antwortzeit</div>
               </div>
             </motion.div>
 
