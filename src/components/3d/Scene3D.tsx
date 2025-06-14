@@ -4,7 +4,7 @@ import { FloatingCube } from './FloatingCube';
 
 export const Scene3D = () => {
   return (
-    <div className="w-full h-full bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50" style={{ background: 'linear-gradient(135deg, #f9fafb 0%, #eff6ff 50%, #faf5ff 100%)' }}>
+    <div className="w-full h-full" style={{ backgroundColor: '#8B7355' }}>
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
         <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
