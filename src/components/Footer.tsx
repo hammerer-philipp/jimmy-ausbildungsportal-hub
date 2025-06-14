@@ -61,7 +61,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                <a href="https://jimmyausbildung.de" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group" target="_blank" rel="noopener noreferrer">
                   Kostenlose Registrierung
                   <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -85,7 +85,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                <a href="/#preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
                   Preise
                   <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </a>

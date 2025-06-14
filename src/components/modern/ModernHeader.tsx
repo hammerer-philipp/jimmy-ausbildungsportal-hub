@@ -40,9 +40,14 @@ export const ModernHeader = () => {
             <ThemeToggle />
             
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group">
-                Jetzt starten
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <Button 
+                asChild
+                className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group"
+              >
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  Jetzt starten
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </motion.div>
           </nav>
@@ -72,8 +77,13 @@ export const ModernHeader = () => {
               <Link to="/presse" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
                 Presse
               </Link>
-              <Button className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header w-fit">
-                Jetzt starten
+              <Button 
+                asChild
+                className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header w-fit"
+              >
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  Jetzt starten
+                </a>
               </Button>
             </div>
           </motion.nav>
