@@ -174,6 +174,88 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Reference Customers Section */}
+      <section className="py-16 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Vertrauen von <span className="text-jimmy-gold">führenden Unternehmen</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Diese Unternehmen nutzen bereits Jimmy für ihre Azubi-Suche
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto"
+          >
+            {/* Edeka Südbayern */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center justify-center p-6 bg-background rounded-lg shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <span className="text-white font-bold text-lg">E</span>
+                </div>
+                <div className="text-sm font-semibold text-foreground">EDEKA</div>
+                <div className="text-xs text-muted-foreground">Südbayern</div>
+              </div>
+            </motion.div>
+
+            {/* Die Backstube Wünsche */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center justify-center p-6 bg-background rounded-lg shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <span className="text-white font-bold text-lg">B</span>
+                </div>
+                <div className="text-sm font-semibold text-foreground">Die Backstube</div>
+                <div className="text-xs text-muted-foreground">Wünsche</div>
+              </div>
+            </motion.div>
+
+            {/* Südbayerische Fleischwaren */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center justify-center p-6 bg-background rounded-lg shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <span className="text-white font-bold text-lg">S</span>
+                </div>
+                <div className="text-sm font-semibold text-foreground">Südbayerische</div>
+                <div className="text-xs text-muted-foreground">Fleischwaren</div>
+              </div>
+            </motion.div>
+
+            {/* Goldmilch */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center justify-center p-6 bg-background rounded-lg shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300"
+            >
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-jimmy-gold to-yellow-400 rounded-lg flex items-center justify-center mb-3 mx-auto">
+                  <span className="text-jimmy-header font-bold text-lg">G</span>
+                </div>
+                <div className="text-sm font-semibold text-foreground">Goldmilch</div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
