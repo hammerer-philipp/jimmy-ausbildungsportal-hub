@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				jimmy: {
+					'header': '#333333',
+					'body': '#242424',
+					'footer': '#333333',
+					'gold': '#ffd000'
 				}
 			},
 			borderRadius: {
