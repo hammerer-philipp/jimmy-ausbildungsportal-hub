@@ -8,7 +8,7 @@ export const HeroSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentScreen((prev) => (prev + 1) % 4);
+      setCurrentScreen((prev) => (prev + 1) % 3); // Nur 3 Screens jetzt
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -182,7 +182,7 @@ export const HeroSection = () => {
                     {/* App Content - animiert durch die Screenshots */}
                     <div className="h-full bg-gray-900 relative overflow-hidden">
                       <AnimatePresence mode="wait">
-                        {/* Screenshot 1: Login Screen - Echtes Bild */}
+                        {/* Screenshot 1: Login Screen - Optimal zentriert */}
                         {currentScreen === 0 && (
                           <motion.div
                             key="login-screen"
@@ -190,17 +190,17 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
-                            className="absolute inset-0"
+                            className="absolute inset-0 flex items-center justify-center"
                           >
                             <img 
                               src="/lovable-uploads/c39fab07-5064-4f44-adf1-1afe5283f533.png" 
                               alt="Jimmy Login Screen"
-                              className="w-full h-full object-cover object-center"
+                              className="w-full h-full object-contain"
                             />
                           </motion.div>
                         )}
                         
-                        {/* Screenshot 2: Jimmy Interview - Echtes Bild */}
+                        {/* Screenshot 2: Jimmy Interview - Optimal zentriert */}
                         {currentScreen === 1 && (
                           <motion.div
                             key="interview-screen"
@@ -208,17 +208,17 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -300 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0"
+                            className="absolute inset-0 flex items-center justify-center"
                           >
                             <img 
                               src="/lovable-uploads/69ba809c-ac86-40fa-ab27-8a77d16523ff.png" 
                               alt="Jimmy Jobinterview Screen"
-                              className="w-full h-full object-cover object-center"
+                              className="w-full h-full object-contain"
                             />
                           </motion.div>
                         )}
                         
-                        {/* Screenshot 3: Bewerbungs-Chat - Echtes Bild */}
+                        {/* Screenshot 3: Bewerbungs-Chat - Optimal zentriert */}
                         {currentScreen === 2 && (
                           <motion.div
                             key="chat-screen"
@@ -226,111 +226,13 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -300 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0"
+                            className="absolute inset-0 flex items-center justify-center"
                           >
                             <img 
                               src="/lovable-uploads/fd22411e-071f-4658-913d-24e9866ce1f9.png" 
                               alt="Bewerbungs-Chat Screen"
-                              className="w-full h-full object-cover object-center"
+                              className="w-full h-full object-contain"
                             />
-                          </motion.div>
-                        )}
-                        
-                        {/* Screenshot 4: Menü - exakt nach neuem Screenshot */}
-                        {currentScreen === 3 && (
-                          <motion.div
-                            key="menu-screen"
-                            initial={{ opacity: 0, x: 300 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -300 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-jimmy-gold"
-                          >
-                            <div className="px-6 py-6">
-                              {/* Menü Header - exakt wie im Screenshot */}
-                              <motion.div 
-                                className="flex items-center space-x-2 mb-8"
-                                initial={{ y: -30, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.2 }}
-                              >
-                                <div className="w-6 h-4 bg-gray-900 rounded flex items-center justify-center">
-                                  <span className="text-jimmy-gold text-xs font-bold">≡</span>
-                                </div>
-                                <span className="text-gray-900 font-bold text-base">Menü</span>
-                              </motion.div>
-                              
-                              {/* Jimmy Ausbildung - mit Logo */}
-                              <motion.div 
-                                className="flex items-center space-x-3 py-4 mb-6"
-                                initial={{ x: -30, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ delay: 0.3 }}
-                              >
-                                <div className="w-10 h-10 border-2 border-gray-900 rounded-full flex items-center justify-center bg-transparent">
-                                  <div className="w-4 h-4 border border-gray-900 rounded-full bg-transparent"></div>
-                                </div>
-                                <span className="text-gray-900 font-semibold text-lg">Jimmy Ausbildung</span>
-                              </motion.div>
-                              
-                              {/* Menu Items */}
-                              <div className="space-y-2">
-                                <motion.div 
-                                  className="flex items-center space-x-3 py-4 border-b border-gray-700"
-                                  initial={{ x: -30, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.4 }}
-                                >
-                                  <div className="w-6 h-6 bg-white rounded flex items-center justify-center shadow-lg">
-                                    <span className="text-gray-900 text-xs">🎯</span>
-                                  </div>
-                                  <span className="text-gray-900 text-base">Jimmy Interview</span>
-                                </motion.div>
-                                
-                                <motion.div 
-                                  className="flex items-center space-x-3 py-4"
-                                  initial={{ x: -30, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.5 }}
-                                >
-                                  <div className="w-6 h-6 bg-white rounded flex items-center justify-center shadow-lg">
-                                    <span className="text-gray-900 text-xs">✉</span>
-                                  </div>
-                                  <span className="text-gray-900 text-base">Jimmy UG</span>
-                                </motion.div>
-                              </div>
-                              
-                              {/* Bottom Section - Account & Buttons */}
-                              <motion.div 
-                                className="absolute bottom-8 left-6 right-6 space-y-4"
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.6 }}
-                              >
-                                <div className="flex items-center space-x-3 py-3">
-                                  <div className="w-6 h-6 bg-white rounded flex items-center justify-center shadow-lg">
-                                    <span className="text-gray-900 text-xs">👤</span>
-                                  </div>
-                                  <span className="text-gray-900 text-sm">Account, Rechtliches & Support</span>
-                                </div>
-                                
-                                <motion.button 
-                                  className="w-full bg-red-600 text-white py-4 rounded-lg font-bold shadow-lg text-base"
-                                  whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
-                                  whileTap={{ scale: 0.98 }}
-                                >
-                                  Abmelden
-                                </motion.button>
-                                
-                                <motion.button 
-                                  className="w-full bg-red-600 text-white py-4 rounded-lg font-bold shadow-lg text-base"
-                                  whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
-                                  whileTap={{ scale: 0.98 }}
-                                >
-                                  Bewerbung löschen
-                                </motion.button>
-                              </motion.div>
-                            </div>
                           </motion.div>
                         )}
                       </AnimatePresence>
