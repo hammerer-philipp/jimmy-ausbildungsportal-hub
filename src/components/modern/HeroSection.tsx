@@ -182,7 +182,7 @@ export const HeroSection = () => {
                     {/* App Content - animiert durch die Screenshots */}
                     <div className="h-full bg-gray-900 relative overflow-hidden">
                       <AnimatePresence mode="wait">
-                        {/* Screenshot 1: Login Screen */}
+                        {/* Screenshot 1: Login Screen - exakt nach neuem Bild */}
                         {currentScreen === 0 && (
                           <motion.div
                             key="login-screen"
@@ -190,20 +190,20 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
-                            className="absolute inset-0 px-8 py-16"
+                            className="absolute inset-0 px-8 py-16 bg-gray-900"
                           >
-                            {/* Exaktes Login Design wie im Screenshot */}
+                            {/* Jimmy Logo - genaue Nachbildung */}
                             <div className="flex justify-center mb-16">
                               <motion.div 
-                                className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center"
+                                className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-transparent"
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                               >
-                                <div className="w-8 h-8 bg-white rounded-full"></div>
+                                <div className="w-6 h-6 border-2 border-white rounded-full bg-transparent"></div>
                               </motion.div>
                             </div>
                             
-                            <h2 className="text-white text-2xl font-bold text-center mb-16">Login</h2>
+                            <h2 className="text-white text-3xl font-bold text-center mb-16">Login</h2>
                             
                             <div className="space-y-4">
                               <motion.input
@@ -211,7 +211,7 @@ export const HeroSection = () => {
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.2 }}
                                 placeholder="E-Mail-Adresse"
-                                className="w-full bg-white rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500"
+                                className="w-full bg-white rounded-lg px-4 py-4 text-gray-900 placeholder-gray-500 text-base"
                               />
                               <motion.input
                                 initial={{ y: 20, opacity: 0 }}
@@ -219,21 +219,21 @@ export const HeroSection = () => {
                                 transition={{ delay: 0.3 }}
                                 placeholder="Passwort"
                                 type="password"
-                                className="w-full bg-white rounded-lg px-4 py-3 text-gray-900 placeholder-gray-500"
+                                className="w-full bg-white rounded-lg px-4 py-4 text-gray-900 placeholder-gray-500 text-base"
                               />
                               
                               <motion.div 
-                                className="flex items-center space-x-2 py-2"
+                                className="flex items-center space-x-3 py-4"
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                               >
                                 <input type="checkbox" className="w-4 h-4 accent-jimmy-gold" />
-                                <span className="text-white text-sm">Angemeldet bleiben</span>
+                                <span className="text-white text-base">Angemeldet bleiben</span>
                               </motion.div>
                               
                               <motion.p 
-                                className="text-white text-sm"
+                                className="text-white text-base py-4"
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.5 }}
@@ -242,7 +242,7 @@ export const HeroSection = () => {
                               </motion.p>
                               
                               <motion.button 
-                                className="w-full bg-jimmy-gold text-gray-900 font-bold py-3 rounded-lg mt-6 shadow-lg"
+                                className="w-full bg-jimmy-gold text-gray-900 font-bold py-4 rounded-lg mt-8 shadow-lg text-lg"
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.6 }}
@@ -253,7 +253,7 @@ export const HeroSection = () => {
                               </motion.button>
                               
                               <motion.div 
-                                className="flex justify-center space-x-4 text-white text-sm mt-6"
+                                className="flex justify-center space-x-6 text-white text-sm mt-8 pt-4"
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.7 }}
@@ -437,7 +437,7 @@ export const HeroSection = () => {
                           </motion.div>
                         )}
                         
-                        {/* Screenshot 4: Menü */}
+                        {/* Screenshot 4: Menü - exakt nach neuem Screenshot */}
                         {currentScreen === 3 && (
                           <motion.div
                             key="menu-screen"
@@ -447,7 +447,8 @@ export const HeroSection = () => {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="absolute inset-0 bg-jimmy-gold"
                           >
-                            <div className="px-6 py-8">
+                            <div className="px-6 py-6">
+                              {/* Menü Header - exakt wie im Screenshot */}
                               <motion.div 
                                 className="flex items-center space-x-2 mb-8"
                                 initial={{ y: -30, opacity: 0 }}
@@ -457,24 +458,26 @@ export const HeroSection = () => {
                                 <div className="w-6 h-4 bg-gray-900 rounded flex items-center justify-center">
                                   <span className="text-jimmy-gold text-xs font-bold">≡</span>
                                 </div>
-                                <span className="text-gray-900 font-bold text-sm">Menü</span>
+                                <span className="text-gray-900 font-bold text-base">Menü</span>
                               </motion.div>
                               
-                              <div className="space-y-4">
+                              {/* Jimmy Ausbildung - mit Logo */}
+                              <motion.div 
+                                className="flex items-center space-x-3 py-4 mb-6"
+                                initial={{ x: -30, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ delay: 0.3 }}
+                              >
+                                <div className="w-10 h-10 border-2 border-gray-900 rounded-full flex items-center justify-center bg-transparent">
+                                  <div className="w-4 h-4 border border-gray-900 rounded-full bg-transparent"></div>
+                                </div>
+                                <span className="text-gray-900 font-semibold text-lg">Jimmy Ausbildung</span>
+                              </motion.div>
+                              
+                              {/* Menu Items */}
+                              <div className="space-y-2">
                                 <motion.div 
-                                  className="flex items-center space-x-3 py-3 border-b border-gray-700"
-                                  initial={{ x: -30, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.3 }}
-                                >
-                                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <span className="text-gray-900 text-xs">👤</span>
-                                  </div>
-                                  <span className="text-gray-900 font-semibold">Jimmy Ausbildung</span>
-                                </motion.div>
-                                
-                                <motion.div 
-                                  className="flex items-center space-x-3 py-3"
+                                  className="flex items-center space-x-3 py-4 border-b border-gray-700"
                                   initial={{ x: -30, opacity: 0 }}
                                   animate={{ x: 0, opacity: 1 }}
                                   transition={{ delay: 0.4 }}
@@ -482,11 +485,11 @@ export const HeroSection = () => {
                                   <div className="w-6 h-6 bg-white rounded flex items-center justify-center shadow-lg">
                                     <span className="text-gray-900 text-xs">🎯</span>
                                   </div>
-                                  <span className="text-gray-900">Jimmy Interview</span>
+                                  <span className="text-gray-900 text-base">Jimmy Interview</span>
                                 </motion.div>
                                 
                                 <motion.div 
-                                  className="flex items-center space-x-3 py-3"
+                                  className="flex items-center space-x-3 py-4"
                                   initial={{ x: -30, opacity: 0 }}
                                   animate={{ x: 0, opacity: 1 }}
                                   transition={{ delay: 0.5 }}
@@ -494,12 +497,13 @@ export const HeroSection = () => {
                                   <div className="w-6 h-6 bg-white rounded flex items-center justify-center shadow-lg">
                                     <span className="text-gray-900 text-xs">✉</span>
                                   </div>
-                                  <span className="text-gray-900">Jimmy UG</span>
+                                  <span className="text-gray-900 text-base">Jimmy UG</span>
                                 </motion.div>
                               </div>
                               
+                              {/* Bottom Section - Account & Buttons */}
                               <motion.div 
-                                className="absolute bottom-8 left-6 right-6 space-y-3"
+                                className="absolute bottom-8 left-6 right-6 space-y-4"
                                 initial={{ y: 50, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: 0.6 }}
@@ -508,11 +512,11 @@ export const HeroSection = () => {
                                   <div className="w-6 h-6 bg-white rounded flex items-center justify-center shadow-lg">
                                     <span className="text-gray-900 text-xs">👤</span>
                                   </div>
-                                  <span className="text-gray-900">Account, Rechtliches & Support</span>
+                                  <span className="text-gray-900 text-sm">Account, Rechtliches & Support</span>
                                 </div>
                                 
                                 <motion.button 
-                                  className="w-full bg-red-600 text-white py-3 rounded-lg font-bold shadow-lg"
+                                  className="w-full bg-red-600 text-white py-4 rounded-lg font-bold shadow-lg text-base"
                                   whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
                                   whileTap={{ scale: 0.98 }}
                                 >
@@ -520,7 +524,7 @@ export const HeroSection = () => {
                                 </motion.button>
                                 
                                 <motion.button 
-                                  className="w-full bg-red-600 text-white py-3 rounded-lg font-bold shadow-lg"
+                                  className="w-full bg-red-600 text-white py-4 rounded-lg font-bold shadow-lg text-base"
                                   whileHover={{ scale: 1.02, backgroundColor: "#dc2626" }}
                                   whileTap={{ scale: 0.98 }}
                                 >
