@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { motion } from 'framer-motion';
+import { ThemeToggle } from '../ThemeToggle';
 
 export const ModernHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +37,8 @@ export const ModernHeader = () => {
               Presse
             </Link>
             
+            <ThemeToggle />
+            
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group">
                 Jetzt starten
@@ -45,12 +48,14 @@ export const ModernHeader = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
