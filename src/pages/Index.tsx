@@ -1,230 +1,242 @@
-import Header from '@/components/Header';
+import { ModernHeader } from '@/components/modern/ModernHeader';
+import { HeroSection } from '@/components/modern/HeroSection';
 import Footer from '@/components/Footer';
+import { motion } from 'framer-motion';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Users, Building, CheckCircle, Star, ArrowRight, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Building2, 
+  ArrowRight, 
+  CheckCircle, 
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe
+} from 'lucide-react';
 
 const Index = () => {
   const features = [
     {
-      icon: <Users className="h-8 w-8 text-jimmy-gold" />,
-      title: "Für Schüler kostenlos",
-      description: "Erstelle dein Profil vollkommen kostenlos und lass dich von Unternehmen finden."
+      icon: Zap,
+      title: "Blitzschnell",
+      description: "Erstelle dein Profil in unter 5 Minuten und erhalte sofort Bewerbungen."
     },
     {
-      icon: <Building className="h-8 w-8 text-jimmy-gold" />,
-      title: "Unternehmen bewerben sich",
-      description: "Der Spieß wird umgedreht - Unternehmen bewerben sich bei talentierten Schülern."
+      icon: Shield,
+      title: "100% Kostenlos",
+      description: "Für Schüler komplett kostenfrei. Keine versteckten Gebühren, nie."
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-jimmy-gold" />,
-      title: "Passende Matches",
-      description: "Intelligente Algorithmen sorgen für perfekte Matches zwischen Schülern und Unternehmen."
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8 text-jimmy-gold" />,
-      title: "Höhere Erfolgsrate",
-      description: "Deutlich höhere Vermittlungsquote als bei herkömmlichen Bewerbungsverfahren."
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Anna Schmidt",
-      role: "Schülerin",
-      text: "Durch Jimmy habe ich meinen Traumausbildungsplatz gefunden, ohne mich bei 20 Unternehmen bewerben zu müssen!",
-      rating: 5
-    },
-    {
-      name: "Thomas Weber",
-      role: "HR-Manager, TechCorp GmbH",
-      text: "Jimmy hat revolutioniert, wie wir Auszubildende finden. Wir erreichen jetzt auch passive Kandidaten.",
-      rating: 5
-    },
-    {
-      name: "Lisa Müller",
-      role: "Schülerin",
-      text: "Endlich eine Plattform, die versteht, dass gute Schüler nicht betteln müssen. Hier werde ich wertgeschätzt!",
-      rating: 5
+      icon: Globe,
+      title: "Deutschlandweit",
+      description: "Unternehmen aus ganz Deutschland suchen nach Talenten wie dir."
     }
   ];
 
   const stats = [
-    { number: "30+", label: "Registrierte Schüler" },
-    { number: "15+", label: "Partner-Unternehmen" },
-    { number: "85%", label: "Erfolgsrate" },
-    { number: "2023", label: "Gegründet" }
+    { value: "30+", label: "Aktive Schüler" },
+    { value: "15+", label: "Partner-Unternehmen" },
+    { value: "95%", label: "Vermittlungsquote" },
+    { value: "< 2 Tage", label: "Ø Antwortzeit" }
   ];
 
   return (
-    <div className="min-h-screen bg-jimmy-body text-jimmy-gold">
-      <Header />
+    <div className="min-h-screen bg-background">
+      <ModernHeader />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto">
-          <Badge className="bg-jimmy-gold text-jimmy-header mb-6">
-            Revolutionäre Ausbildungsplatz-Vermittlung
-          </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Der Bewerbungsprozess, <span className="text-yellow-300">neu gedacht</span>
-          </h1>
-          <p className="text-xl text-jimmy-gold/80 mb-8 max-w-2xl mx-auto">
-            Bei Jimmy bewerben sich Unternehmen bei talentierten Schülern. 
-            Keine endlosen Bewerbungen mehr - lass dich finden!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-jimmy-gold text-jimmy-header hover:bg-yellow-400 text-lg px-8 py-3">
-              Als Schüler kostenlos registrieren
-            </Button>
-            <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header text-lg px-8 py-3">
-              Für Unternehmen
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Warum Jimmy?</h2>
-          <p className="text-jimmy-gold/80 max-w-2xl mx-auto">
-            Jimmy revolutioniert die Art, wie Schüler und Unternehmen zueinander finden
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="bg-jimmy-header border-jimmy-gold/20 text-center hover:border-jimmy-gold/40 transition-colors">
-              <CardHeader>
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <CardTitle className="text-jimmy-gold">{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-jimmy-gold/80">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-jimmy-header py-16">
+      <section className="py-24 relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl font-bold text-jimmy-gold mb-2">{stat.number}</div>
-                <div className="text-jimmy-gold/80">{stat.label}</div>
-              </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Warum <span className="text-jimmy-gold">Jimmy</span> anders ist
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Vergiss traditionelle Bewerbungen. Bei uns dreht sich alles um dich.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <Card className="border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 hover:shadow-lg h-full">
+                  <CardContent className="p-6 text-center">
+                    <div className="mb-4 inline-flex items-center justify-center w-12 h-12 bg-jimmy-gold/10 rounded-lg">
+                      <feature.icon className="w-6 h-6 text-jimmy-gold" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* How it works */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">So funktioniert's</h2>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="bg-jimmy-header border-jimmy-gold/20 text-center">
-            <CardHeader>
-              <div className="w-12 h-12 bg-jimmy-gold text-jimmy-header rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                1
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              So einfach funktioniert's
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* For Students */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center mb-6">
+                <Users className="w-8 h-8 text-jimmy-gold mr-3" />
+                <h3 className="text-2xl font-bold">Für Schüler</h3>
               </div>
-              <CardTitle className="text-jimmy-gold">Profil erstellen</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-jimmy-gold/80">
-                Schüler erstellen ein aussagekräftiges Profil mit ihren Stärken und Interessen
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-jimmy-header border-jimmy-gold/20 text-center">
-            <CardHeader>
-              <div className="w-12 h-12 bg-jimmy-gold text-jimmy-header rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                2
+              
+              <div className="space-y-4">
+                {[
+                  "Profil in 5 Minuten erstellen",
+                  "Unternehmen bewerben sich bei dir",
+                  "Du wählst den besten Ausbildungsplatz"
+                ].map((step, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-jimmy-gold text-jimmy-header rounded-full flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <span className="text-lg">{step}</span>
+                  </div>
+                ))}
               </div>
-              <CardTitle className="text-jimmy-gold">Gefunden werden</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-jimmy-gold/80">
-                Unternehmen durchsuchen unsere Datenbank und bewerben sich bei passenden Schülern
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-jimmy-header border-jimmy-gold/20 text-center">
-            <CardHeader>
-              <div className="w-12 h-12 bg-jimmy-gold text-jimmy-header rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                3
+
+              <Button className="mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group">
+                Jetzt kostenlos starten
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </motion.div>
+
+            {/* For Companies */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center mb-6">
+                <Building2 className="w-8 h-8 text-jimmy-gold mr-3" />
+                <h3 className="text-2xl font-bold">Für Unternehmen</h3>
               </div>
-              <CardTitle className="text-jimmy-gold">Auswählen</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-jimmy-gold/80">
-                Schüler wählen aus den Bewerbungen die interessantesten aus und nehmen Kontakt auf
-              </p>
-            </CardContent>
-          </Card>
+              
+              <div className="space-y-4">
+                {[
+                  "Zugang zur Schüler-Datenbank",
+                  "Direkte Bewerbung an passende Talente",
+                  "Schneller zum perfekten Azubi"
+                ].map((step, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-jimmy-gold text-jimmy-header rounded-full flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <span className="text-lg">{step}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Button variant="outline" className="mt-6 border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
+                Mehr erfahren
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-jimmy-header py-16">
+      {/* Stats Section */}
+      <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-jimmy-gold mb-4">Das sagen unsere Nutzer</h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-jimmy-body border-jimmy-gold/20">
-                <CardHeader>
-                  <div className="flex items-center space-x-1 mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-jimmy-gold text-jimmy-gold" />
-                    ))}
-                  </div>
-                  <CardTitle className="text-jimmy-gold text-lg">{testimonial.name}</CardTitle>
-                  <p className="text-jimmy-gold/60 text-sm">{testimonial.role}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-jimmy-gold/80 italic">"{testimonial.text}"</p>
-                </CardContent>
-              </Card>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Zahlen, die überzeugen
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-jimmy-gold mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-muted-foreground">{stat.label}</div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6">
-            Bereit für die Zukunft der Ausbildungsplatz-Suche?
-          </h2>
-          <p className="text-xl text-jimmy-gold/80 mb-8">
-            Schließe dich bereits 30+ Schülern und 15+ Unternehmen an, die Jimmy vertrauen.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-jimmy-gold text-jimmy-header hover:bg-yellow-400 text-lg px-8 py-3">
-              Jetzt kostenlos starten
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Link to="/preise">
-              <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header text-lg px-8 py-3">
-                Preise ansehen
+      <section className="py-24 bg-gradient-to-r from-jimmy-gold/10 to-yellow-400/10">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Bereit für den nächsten Schritt?
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Werde Teil der Ausbildungs-Revolution und starte noch heute deine Zukunft.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group"
+              >
+                Kostenlos als Schüler starten
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
-          </div>
+              
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-jimmy-gold/30 hover:bg-jimmy-gold/10"
+              >
+                Unternehmen: Mehr erfahren
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 

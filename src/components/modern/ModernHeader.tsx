@@ -1,0 +1,85 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { Button } from '../ui/button';
+import { motion } from 'framer-motion';
+
+export const ModernHeader = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <motion.header 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border/40"
+    >
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-2"
+          >
+            <div className="w-8 h-8 bg-gradient-to-r from-jimmy-gold to-yellow-400 rounded-lg flex items-center justify-center">
+              <span className="text-jimmy-header font-bold text-lg">J</span>
+            </div>
+            <Link to="/" className="text-xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-400 bg-clip-text text-transparent">
+              Jimmy
+            </Link>
+          </motion.div>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/preise" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
+              Preise
+            </Link>
+            <Link to="/blog" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
+              Blog
+            </Link>
+            <Link to="/presse" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
+              Presse
+            </Link>
+            
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group">
+                Jetzt starten
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </motion.div>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            className="md:hidden mt-4 py-4 border-t border-border/40"
+          >
+            <div className="flex flex-col space-y-4">
+              <Link to="/preise" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
+                Preise
+              </Link>
+              <Link to="/blog" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
+                Blog
+              </Link>
+              <Link to="/presse" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
+                Presse
+              </Link>
+              <Button className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header w-fit">
+                Jetzt starten
+              </Button>
+            </div>
+          </motion.nav>
+        )}
+      </div>
+    </motion.header>
+  );
+};
