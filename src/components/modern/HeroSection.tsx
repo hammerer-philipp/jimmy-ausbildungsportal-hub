@@ -157,27 +157,9 @@ export const HeroSection = () => {
                   <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                   
                   {/* Screen mit realistischen App-Screenshots */}
-                  <div className="bg-black rounded-[2.5rem] overflow-hidden relative h-[600px] w-[300px] shadow-inner">
-                    {/* Status Bar - exakt wie im Screenshot */}
-                    <div className="flex justify-between items-center px-6 py-2 text-white text-sm bg-gray-900 relative z-10">
-                      <span className="font-medium">9:41</span>
-                      <div className="flex space-x-1 items-center">
-                        <div className="flex space-x-0.5">
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white rounded-full"></div>
-                          <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-                        </div>
-                        <svg className="w-6 h-3 ml-1" viewBox="0 0 24 12">
-                          <rect x="0" y="3" width="20" height="6" rx="2" fill="white" opacity="0.3"/>
-                          <rect x="1" y="4" width="18" height="4" rx="1" fill="#00ff00"/>
-                          <rect x="21" y="4.5" width="2" height="3" rx="0.5" fill="white" opacity="0.6"/>
-                        </svg>
-                      </div>
-                    </div>
-                    
+                  <div className="bg-black rounded-[2.5rem] overflow-hidden relative h-[500px] w-[260px] shadow-inner">
                     {/* Dynamic Island */}
-                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-20"></div>
+                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20"></div>
                     
                     {/* App Content - animiert durch die Screenshots */}
                     <div className="h-full bg-gray-900 relative overflow-hidden">
@@ -190,12 +172,12 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
-                            className="absolute inset-0 flex items-center justify-center"
+                            className="absolute inset-0"
                           >
                             <img 
                               src="/lovable-uploads/c39fab07-5064-4f44-adf1-1afe5283f533.png" 
                               alt="Jimmy Login Screen"
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-cover"
                             />
                           </motion.div>
                         )}
@@ -208,12 +190,12 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -300 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0 flex items-center justify-center"
+                            className="absolute inset-0"
                           >
                             <img 
                               src="/lovable-uploads/69ba809c-ac86-40fa-ab27-8a77d16523ff.png" 
                               alt="Jimmy Jobinterview Screen"
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-cover"
                             />
                           </motion.div>
                         )}
@@ -226,12 +208,12 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -300 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0 flex items-center justify-center"
+                            className="absolute inset-0"
                           >
                             <img 
                               src="/lovable-uploads/fd22411e-071f-4658-913d-24e9866ce1f9.png" 
                               alt="Bewerbungs-Chat Screen"
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-cover"
                             />
                           </motion.div>
                         )}
@@ -248,14 +230,14 @@ export const HeroSection = () => {
                 </div>
               </motion.div>
 
-              {/* 3D Floating Elements */}
+              {/* 3D Floating Elements - Mobile optimiert */}
               <motion.div
                 animate={{ 
                   y: [0, -10, 0],
                   opacity: [0.7, 1, 0.7]
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 -right-6 bg-green-500 text-white text-xs px-3 py-2 rounded-full shadow-lg z-10"
+                className="absolute -top-2 -right-2 md:-top-4 md:-right-6 bg-green-500 text-white text-xs px-2 py-1 md:px-3 md:py-2 rounded-full shadow-lg z-10"
               >
                 <div className="flex items-center space-x-1">
                   <motion.div 
@@ -263,7 +245,8 @@ export const HeroSection = () => {
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 1, repeat: Infinity }}
                   />
-                  <span>Live Bewerbungen</span>
+                  <span className="hidden sm:inline">Live Bewerbungen</span>
+                  <span className="sm:hidden">Live</span>
                 </div>
               </motion.div>
 
@@ -273,11 +256,12 @@ export const HeroSection = () => {
                   y: [0, -5, 0]
                 }}
                 transition={{ duration: 2.5, repeat: Infinity }}
-                className="absolute -bottom-6 -left-6 bg-jimmy-gold text-jimmy-header text-xs px-4 py-2 rounded-full shadow-lg z-10"
+                className="absolute -bottom-2 -left-2 md:-bottom-6 md:-left-6 bg-jimmy-gold text-jimmy-header text-xs px-2 py-1 md:px-4 md:py-2 rounded-full shadow-lg z-10"
               >
                 <div className="flex items-center space-x-1">
                   <Users className="w-3 h-3" />
-                  <span>30+ Schüler online</span>
+                  <span className="hidden sm:inline">30+ Schüler online</span>
+                  <span className="sm:hidden">30+</span>
                 </div>
               </motion.div>
             </div>
