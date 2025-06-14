@@ -29,9 +29,6 @@ export const ModernHeader = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/preise" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
-              Preise
-            </Link>
             <Link to="/blog" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
               Blog
             </Link>
@@ -64,9 +61,6 @@ export const ModernHeader = () => {
             className="md:hidden mt-4 py-4 border-t border-border/40"
           >
             <div className="flex flex-col space-y-4">
-              <Link to="/preise" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
-                Preise
-              </Link>
               <Link to="/blog" className="text-foreground/80 hover:text-jimmy-gold transition-colors">
                 Blog
               </Link>

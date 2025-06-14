@@ -9,7 +9,7 @@ import Presse from "./pages/Presse";
 import Karriere from "./pages/Karriere";
 import FAQSchueler from "./pages/FAQSchueler";
 import FAQUnternehmen from "./pages/FAQUnternehmen";
-import Preise from "./pages/Preise";
+
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import AGB from "./pages/AGB";
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/karriere" element={<Karriere />} />
           <Route path="/faq-schueler" element={<FAQSchueler />} />
           <Route path="/faq-unternehmen" element={<FAQUnternehmen />} />
-          <Route path="/preise" element={<Preise />} />
+          
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/agb" element={<AGB />} />

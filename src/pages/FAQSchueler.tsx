@@ -1,7 +1,10 @@
-import Header from '@/components/Header';
+import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
+import { Mail, Phone, HelpCircle } from 'lucide-react';
 
 const FAQSchueler = () => {
   const faqItems = [
@@ -56,54 +59,99 @@ const FAQSchueler = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-jimmy-body text-jimmy-gold">
-      <Header />
+    <div className="min-h-screen bg-background">
+      <ModernHeader />
       
-      <main className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">FAQ für Schüler</h1>
-          <p className="text-xl text-jimmy-gold/80 max-w-2xl mx-auto">
-            Häufig gestellte Fragen und Antworten für Schüler auf der Suche nach dem perfekten Ausbildungsplatz
-          </p>
-        </div>
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-16 bg-gradient-to-br from-background to-muted/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center max-w-3xl mx-auto"
+            >
+              <HelpCircle className="w-16 h-16 text-jimmy-gold mx-auto mb-6" />
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                FAQ für <span className="text-jimmy-gold">Schüler</span>
+              </h1>
+              <p className="text-xl text-muted-foreground">
+                Häufig gestellte Fragen und Antworten für Schüler auf der Suche nach dem perfekten Ausbildungsplatz
+              </p>
+            </motion.div>
+          </div>
+        </section>
 
-        <Card className="bg-jimmy-header border-jimmy-gold/20 p-6">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-jimmy-gold/20">
-                <AccordionTrigger className="text-jimmy-gold hover:text-yellow-300 text-left">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-jimmy-gold/80">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </Card>
+        {/* FAQ Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Card className="border-border/40 max-w-4xl mx-auto">
+                <CardContent className="p-8">
+                  <Accordion type="single" collapsible className="w-full">
+                    {faqItems.map((item, index) => (
+                      <AccordionItem key={index} value={`item-${index}`} className="border-border/40">
+                        <AccordionTrigger className="text-foreground hover:text-jimmy-gold text-left">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-muted-foreground">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
 
-        <div className="text-center mt-12">
-          <Card className="bg-jimmy-header border-jimmy-gold/20 p-8">
-            <h2 className="text-2xl font-bold text-jimmy-gold mb-4">
-              Weitere Fragen?
-            </h2>
-            <p className="text-jimmy-gold/80 mb-6">
-              Wenn du weitere Fragen hast, die hier nicht beantwortet wurden, 
-              zögere nicht, uns zu kontaktieren. Unser Support-Team hilft dir gerne weiter!
-            </p>
-            <div className="space-y-2">
-              <p className="text-jimmy-gold">
-                <strong>E-Mail:</strong> support@jimmy-portal.de
-              </p>
-              <p className="text-jimmy-gold">
-                <strong>Telefon:</strong> +49 (0) 123 456789
-              </p>
-              <p className="text-jimmy-gold/60 text-sm">
-                Montag bis Freitag: 9:00 - 17:00 Uhr
-              </p>
-            </div>
-          </Card>
-        </div>
+        {/* Contact Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <Card className="border-border/40">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl font-bold mb-4">
+                    Weitere Fragen?
+                  </CardTitle>
+                  <p className="text-muted-foreground">
+                    Wenn du weitere Fragen hast, die hier nicht beantwortet wurden, 
+                    zögere nicht, uns zu kontaktieren. Unser Support-Team hilft dir gerne weiter!
+                  </p>
+                </CardHeader>
+                <CardContent className="grid md:grid-cols-2 gap-8">
+                  <div className="text-center">
+                    <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">E-Mail Support</h3>
+                    <p className="text-muted-foreground mb-4">support@jimmy-portal.de</p>
+                    <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
+                      E-Mail schreiben
+                    </Button>
+                  </div>
+                  <div className="text-center">
+                    <Phone className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Telefon Support</h3>
+                    <p className="text-muted-foreground mb-2">+49 (0) 123 456789</p>
+                    <p className="text-sm text-muted-foreground mb-4">Mo-Fr: 9:00 - 17:00 Uhr</p>
+                    <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
+                      Anrufen
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
       </main>
 
       <Footer />

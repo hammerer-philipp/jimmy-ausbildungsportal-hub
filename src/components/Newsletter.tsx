@@ -50,12 +50,12 @@ const Newsletter = () => {
         placeholder="Ihre E-Mail-Adresse"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="bg-jimmy-body border-jimmy-gold/20 text-jimmy-gold placeholder:text-jimmy-gold/60"
+        className="bg-background border-border/40 focus:border-jimmy-gold"
       />
       <Button
         type="submit"
         disabled={isLoading}
-        className="w-full bg-jimmy-gold text-jimmy-header hover:bg-yellow-400"
+        className="w-full bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold"
       >
         {isLoading ? 'Wird angemeldet...' : 'Anmelden'}
       </Button>

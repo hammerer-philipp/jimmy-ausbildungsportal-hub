@@ -61,10 +61,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                <a href="#preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
                   Kostenlose Registrierung
                   <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </li>
             </ul>
           </motion.div>
@@ -85,10 +85,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                <a href="#preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
                   Preise
                   <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                </a>
               </li>
             </ul>
           </motion.div>
