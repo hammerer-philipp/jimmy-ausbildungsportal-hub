@@ -18,11 +18,9 @@ const Footer = () => {
             className="space-y-4"
           >
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-jimmy-gold to-yellow-400 rounded-lg flex items-center justify-center">
-                <span className="text-jimmy-header font-bold text-lg">J</span>
-              </div>
+              <img src="/lovable-uploads/ae06c914-e73d-4227-abd6-5446944d168a.png" alt="Jimmy Ausbildung Logo" className="w-8 h-8 rounded-lg" />
               <h3 className="text-xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-400 bg-clip-text text-transparent">
-                Jimmy
+                Jimmy Ausbildung
               </h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -37,11 +35,11 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-2 whitespace-nowrap">
                   <Mail size={16} className="text-jimmy-gold flex-shrink-0" />
-                  <span>info@jimmy-portal.de</span>
+                  <span>kontakt@jimmy-ausbildung.de</span>
                 </div>
                 <div className="flex items-center space-x-2 whitespace-nowrap">
                   <Phone size={16} className="text-jimmy-gold flex-shrink-0" />
-                  <span>+49 (0) 123 456789</span>
+                  <span>+49 1515 7952359</span>
                 </div>
               </div>
             </div>

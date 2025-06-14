@@ -131,9 +131,11 @@ const Index = () => {
                 ))}
               </div>
 
-              <Button className="mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group">
-                Jetzt kostenlos starten
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <Button className="mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group" asChild>
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  Jetzt kostenlos starten
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </motion.div>
 
@@ -163,8 +165,10 @@ const Index = () => {
                 ))}
               </div>
 
-              <Button variant="outline" className="mt-6 border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
-                Mehr erfahren
+              <Button variant="outline" className="mt-6 border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header" asChild>
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  Jetzt starten
+                </a>
               </Button>
             </motion.div>
           </div>
@@ -265,9 +269,11 @@ const Index = () => {
                     </ul>
                   </div>
                   
-                  <Button className="w-full bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group">
-                    Jetzt registrieren
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button className="w-full bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group" asChild>
+                    <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                      Jetzt registrieren
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -319,8 +325,10 @@ const Index = () => {
                     </ul>
                   </div>
                   
-                  <Button variant="outline" className="w-full border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
-                    14 Tage kostenlos testen
+                  <Button variant="outline" className="w-full border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header" asChild>
+                    <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                      14 Tage kostenlos testen
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
@@ -388,17 +396,23 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold group"
+                asChild
               >
-                Kostenlos als Schüler starten
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  Kostenlos als Schüler starten
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-jimmy-gold/30 hover:bg-jimmy-gold/10"
+                asChild
               >
-                Unternehmen: Mehr erfahren
+                <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
+                  Für Unternehmen starten
+                </a>
               </Button>
             </div>
           </motion.div>
