@@ -156,15 +156,15 @@ export const HeroSection = () => {
                   {/* Highlight am Rand für 3D Effekt */}
                   <div className="absolute inset-0 rounded-[3rem] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                   
-                    {/* Screen mit realistischen App-Screenshots */}
-                    <div className="bg-black rounded-[2.5rem] overflow-hidden relative h-[500px] w-[260px] shadow-inner">
-                      {/* Dynamic Island */}
-                      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20"></div>
+                    {/* Screen mit realistischen App-Screenshots - iPhone SE Format */}
+                    <div className="bg-black rounded-[2rem] overflow-hidden relative h-[568px] w-[320px] shadow-inner">
+                      {/* Home Button für iPhone SE */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 border-2 border-gray-600 rounded-full z-20"></div>
                       
                       {/* App Content - animiert durch die Screenshots */}
-                      <div className="h-full bg-gray-900 relative overflow-hidden rounded-[2.5rem]">
+                      <div className="h-full bg-gray-900 relative overflow-hidden rounded-[2rem]">
                         <AnimatePresence mode="wait">
-                          {/* Screenshot 1: Login Screen - Perfekt angepasst */}
+                          {/* Screenshot 1: Login Screen - iPhone SE angepasst */}
                           {currentScreen === 0 && (
                             <motion.div
                               key="login-screen"
@@ -172,7 +172,7 @@ export const HeroSection = () => {
                               animate={{ opacity: 1, scale: 1 }}
                               exit={{ opacity: 0, scale: 0.9 }}
                               transition={{ duration: 0.5 }}
-                              className="absolute inset-0 rounded-[2.5rem] overflow-hidden"
+                              className="absolute inset-0 rounded-[2rem] overflow-hidden"
                             >
                               <img 
                                 src="/lovable-uploads/c39fab07-5064-4f44-adf1-1afe5283f533.png" 
@@ -182,7 +182,7 @@ export const HeroSection = () => {
                             </motion.div>
                           )}
                           
-                          {/* Screenshot 2: Jimmy Interview - Perfekt angepasst */}
+                          {/* Screenshot 2: Jimmy Interview - iPhone SE angepasst */}
                           {currentScreen === 1 && (
                             <motion.div
                               key="interview-screen"
@@ -190,7 +190,7 @@ export const HeroSection = () => {
                               animate={{ opacity: 1, x: 0 }}
                               exit={{ opacity: 0, x: -300 }}
                               transition={{ duration: 0.5, ease: "easeInOut" }}
-                              className="absolute inset-0 rounded-[2.5rem] overflow-hidden"
+                              className="absolute inset-0 rounded-[2rem] overflow-hidden"
                             >
                               <img 
                                 src="/lovable-uploads/69ba809c-ac86-40fa-ab27-8a77d16523ff.png" 
@@ -200,7 +200,7 @@ export const HeroSection = () => {
                             </motion.div>
                           )}
                           
-                          {/* Screenshot 3: Bewerbungs-Chat - Perfekt angepasst */}
+                          {/* Screenshot 3: Bewerbungs-Chat - iPhone SE angepasst */}
                           {currentScreen === 2 && (
                             <motion.div
                               key="chat-screen"
@@ -208,7 +208,7 @@ export const HeroSection = () => {
                               animate={{ opacity: 1, x: 0 }}
                               exit={{ opacity: 0, x: -300 }}
                               transition={{ duration: 0.5, ease: "easeInOut" }}
-                              className="absolute inset-0 rounded-[2.5rem] overflow-hidden"
+                              className="absolute inset-0 rounded-[2rem] overflow-hidden"
                             >
                               <img 
                                 src="/lovable-uploads/fd22411e-071f-4658-913d-24e9866ce1f9.png" 
