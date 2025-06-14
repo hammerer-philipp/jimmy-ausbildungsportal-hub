@@ -37,8 +37,7 @@ const Index = () => {
 
   const stats = [
     { value: "30+", label: "Aktive Schüler" },
-    { value: "15+", label: "Partner-Unternehmen" },
-    { value: "95%", label: "Vermittlungsquote" },
+    { value: "5+", label: "Aktive Unternehmen" },
     { value: "< 2 Tage", label: "Ø Antwortzeit" }
   ];
 
