@@ -158,8 +158,6 @@ export const HeroSection = () => {
                   
                     {/* Screen mit realistischen App-Screenshots - iPhone SE Format */}
                     <div className="bg-black rounded-[2rem] overflow-hidden relative h-[568px] w-[320px] shadow-inner">
-                      {/* Home Button für iPhone SE */}
-                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 border-2 border-gray-600 rounded-full z-20"></div>
                       
                       {/* App Content - animiert durch die Screenshots */}
                       <div className="h-full bg-gray-900 relative overflow-hidden rounded-[2rem]">
@@ -230,25 +228,6 @@ export const HeroSection = () => {
                 </div>
               </motion.div>
 
-              {/* 3D Floating Elements - Mobile optimiert */}
-              <motion.div
-                animate={{ 
-                  y: [0, -10, 0],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-2 -right-2 md:-top-4 md:-right-6 bg-green-500 text-white text-xs px-2 py-1 md:px-3 md:py-2 rounded-full shadow-lg z-10"
-              >
-                <div className="flex items-center space-x-1">
-                  <motion.div 
-                    className="w-2 h-2 bg-white rounded-full"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 1, repeat: Infinity }}
-                  />
-                  <span className="hidden sm:inline">Live Bewerbungen</span>
-                  <span className="sm:hidden">Live</span>
-                </div>
-              </motion.div>
 
               <motion.div
                 animate={{ 
