@@ -103,7 +103,7 @@ const Index = () => {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center max-w-4xl mx-auto">
             {/* For Students */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -188,7 +188,7 @@ const Index = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
