@@ -182,7 +182,7 @@ export const HeroSection = () => {
                     {/* App Content - animiert durch die Screenshots */}
                     <div className="h-full bg-gray-900 relative overflow-hidden">
                       <AnimatePresence mode="wait">
-                        {/* Screenshot 1: Login Screen - exakt nach neuem Bild */}
+                        {/* Screenshot 1: Login Screen - Echtes Bild */}
                         {currentScreen === 0 && (
                           <motion.div
                             key="login-screen"
@@ -190,83 +190,17 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
-                            className="absolute inset-0 px-8 py-16 bg-gray-900"
+                            className="absolute inset-0"
                           >
-                            {/* Jimmy Logo - genaue Nachbildung */}
-                            <div className="flex justify-center mb-16">
-                              <motion.div 
-                                className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-transparent"
-                                animate={{ rotate: 360 }}
-                                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                              >
-                                <div className="w-6 h-6 border-2 border-white rounded-full bg-transparent"></div>
-                              </motion.div>
-                            </div>
-                            
-                            <h2 className="text-white text-3xl font-bold text-center mb-16">Login</h2>
-                            
-                            <div className="space-y-4">
-                              <motion.input
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.2 }}
-                                placeholder="E-Mail-Adresse"
-                                className="w-full bg-white rounded-lg px-4 py-4 text-gray-900 placeholder-gray-500 text-base"
-                              />
-                              <motion.input
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.3 }}
-                                placeholder="Passwort"
-                                type="password"
-                                className="w-full bg-white rounded-lg px-4 py-4 text-gray-900 placeholder-gray-500 text-base"
-                              />
-                              
-                              <motion.div 
-                                className="flex items-center space-x-3 py-4"
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.4 }}
-                              >
-                                <input type="checkbox" className="w-4 h-4 accent-jimmy-gold" />
-                                <span className="text-white text-base">Angemeldet bleiben</span>
-                              </motion.div>
-                              
-                              <motion.p 
-                                className="text-white text-base py-4"
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.5 }}
-                              >
-                                Noch kein Account? <span className="underline">Hier geht's zur Registrierung.</span>
-                              </motion.p>
-                              
-                              <motion.button 
-                                className="w-full bg-jimmy-gold text-gray-900 font-bold py-4 rounded-lg mt-8 shadow-lg text-lg"
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.6 }}
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                              >
-                                Einloggen
-                              </motion.button>
-                              
-                              <motion.div 
-                                className="flex justify-center space-x-6 text-white text-sm mt-8 pt-4"
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.7 }}
-                              >
-                                <span className="underline cursor-pointer hover:text-jimmy-gold transition-colors">Impressum</span>
-                                <span className="underline cursor-pointer hover:text-jimmy-gold transition-colors">Datenschutz</span>
-                                <span className="underline cursor-pointer hover:text-jimmy-gold transition-colors">AGB</span>
-                              </motion.div>
-                            </div>
+                            <img 
+                              src="/lovable-uploads/c39fab07-5064-4f44-adf1-1afe5283f533.png" 
+                              alt="Jimmy Login Screen"
+                              className="w-full h-full object-cover object-center"
+                            />
                           </motion.div>
                         )}
                         
-                        {/* Screenshot 2: Jimmy Interview */}
+                        {/* Screenshot 2: Jimmy Interview - Echtes Bild */}
                         {currentScreen === 1 && (
                           <motion.div
                             key="interview-screen"
@@ -276,70 +210,15 @@ export const HeroSection = () => {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="absolute inset-0"
                           >
-                            {/* Menu Bar exakt wie im Screenshot */}
-                            <motion.div 
-                              className="bg-jimmy-gold px-4 py-3 flex items-center"
-                              initial={{ y: -50 }}
-                              animate={{ y: 0 }}
-                              transition={{ delay: 0.2 }}
-                            >
-                              <div className="flex items-center space-x-2">
-                                <div className="w-6 h-4 bg-gray-900 rounded flex items-center justify-center">
-                                  <span className="text-jimmy-gold text-xs font-bold">≡</span>
-                                </div>
-                                <span className="text-gray-900 font-bold text-sm">Menü</span>
-                              </div>
-                            </motion.div>
-                            
-                            <div className="px-6 py-6">
-                              <motion.h3 
-                                className="text-white text-xl font-bold mb-8"
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.3 }}
-                              >
-                                Jimmy Jobinterview
-                              </motion.h3>
-                              
-                              <motion.div 
-                                className="bg-jimmy-gold rounded-lg p-4 mb-8 shadow-lg"
-                                initial={{ scale: 0.9, opacity: 0 }}
-                                animate={{ scale: 1, opacity: 1 }}
-                                transition={{ delay: 0.4, type: "spring" }}
-                              >
-                                <p className="text-gray-900 text-sm leading-relaxed">
-                                  Hallo, ich bin Jimmy, dein Begleiter für deine Bewerbung! 
-                                  Wir führen ein kurzes Interview durch, danach kannst du von 
-                                  Unternehmen angeschrieben werden, bist du bereit? Wenn 
-                                  ja, schreibe 'Ja' oder 'Lass uns anfangen' um zu starten.
-                                </p>
-                              </motion.div>
-                              
-                              <motion.div 
-                                className="absolute bottom-0 left-0 right-0 p-4"
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.5 }}
-                              >
-                                <div className="flex space-x-3">
-                                  <input
-                                    placeholder="Nachricht schreiben"
-                                    className="flex-1 bg-gray-700 text-white px-4 py-3 rounded-lg placeholder-gray-400"
-                                  />
-                                  <motion.button 
-                                    className="bg-jimmy-gold w-12 h-12 rounded-lg flex items-center justify-center shadow-lg"
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                  >
-                                    <span className="text-gray-900 text-lg">▶</span>
-                                  </motion.button>
-                                </div>
-                              </motion.div>
-                            </div>
+                            <img 
+                              src="/lovable-uploads/69ba809c-ac86-40fa-ab27-8a77d16523ff.png" 
+                              alt="Jimmy Jobinterview Screen"
+                              className="w-full h-full object-cover object-center"
+                            />
                           </motion.div>
                         )}
                         
-                        {/* Screenshot 3: Bewerbungs-Chat */}
+                        {/* Screenshot 3: Bewerbungs-Chat - Echtes Bild */}
                         {currentScreen === 2 && (
                           <motion.div
                             key="chat-screen"
@@ -349,91 +228,11 @@ export const HeroSection = () => {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="absolute inset-0"
                           >
-                            {/* Menu Bar */}
-                            <motion.div 
-                              className="bg-jimmy-gold px-4 py-3 flex items-center"
-                              initial={{ y: -50 }}
-                              animate={{ y: 0 }}
-                              transition={{ delay: 0.2 }}
-                            >
-                              <div className="flex items-center space-x-2">
-                                <div className="w-6 h-4 bg-gray-900 rounded flex items-center justify-center">
-                                  <span className="text-jimmy-gold text-xs font-bold">≡</span>
-                                </div>
-                                <span className="text-gray-900 font-bold text-sm">Menü</span>
-                              </div>
-                            </motion.div>
-                            
-                            <div className="px-6 py-6">
-                              <motion.h3 
-                                className="text-white text-xl font-bold mb-8"
-                                initial={{ y: 20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 0.3 }}
-                              >
-                                Bewerbungs-Chat
-                              </motion.h3>
-                              
-                              <div className="space-y-4 mb-20">
-                                <motion.div 
-                                  className="bg-jimmy-gold rounded-lg p-4 shadow-lg"
-                                  initial={{ x: -50, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.4 }}
-                                >
-                                  <p className="text-gray-900 text-sm">
-                                    Hallo wir sind die Jimmy UG und sind auf 
-                                    dich aufmerksam geworden. Hättest du 
-                                    Interesse an einer Ausbildung in unserem 
-                                    Betrieb?
-                                  </p>
-                                </motion.div>
-                                
-                                <motion.div 
-                                  className="bg-white rounded-lg p-3 ml-8 shadow-lg"
-                                  initial={{ x: 50, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.6 }}
-                                >
-                                  <p className="text-gray-900 text-sm">
-                                    Hallo, ja das hört sich interessant an :)
-                                  </p>
-                                </motion.div>
-                                
-                                <motion.div 
-                                  className="bg-jimmy-gold rounded-lg p-4 shadow-lg"
-                                  initial={{ x: -50, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.8 }}
-                                >
-                                  <p className="text-gray-900 text-sm">
-                                    Super wir könnten dir verschiedene 
-                                    Ausbildungen anbieten:
-                                  </p>
-                                </motion.div>
-                              </div>
-                              
-                              <motion.div 
-                                className="absolute bottom-0 left-0 right-0 p-4"
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
-                                transition={{ delay: 1.0 }}
-                              >
-                                <div className="flex space-x-3">
-                                  <input
-                                    placeholder="Nachricht schreiben"
-                                    className="flex-1 bg-gray-700 text-white px-4 py-3 rounded-lg placeholder-gray-400"
-                                  />
-                                  <motion.button 
-                                    className="bg-jimmy-gold w-12 h-12 rounded-lg flex items-center justify-center shadow-lg"
-                                    whileHover={{ scale: 1.1 }}
-                                    whileTap={{ scale: 0.9 }}
-                                  >
-                                    <span className="text-gray-900 text-lg">▶</span>
-                                  </motion.button>
-                                </div>
-                              </motion.div>
-                            </div>
+                            <img 
+                              src="/lovable-uploads/fd22411e-071f-4658-913d-24e9866ce1f9.png" 
+                              alt="Bewerbungs-Chat Screen"
+                              className="w-full h-full object-cover object-center"
+                            />
                           </motion.div>
                         )}
                         
