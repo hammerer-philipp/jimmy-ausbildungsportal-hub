@@ -239,7 +239,7 @@ export const HeroSection = () => {
               >
                 <div className="flex items-center space-x-1">
                   <Users className="w-3 h-3" />
-                  <span className="hidden sm:inline">30+ Schüler online</span>
+                  <span className="hidden sm:inline">30+ Schüler</span>
                   <span className="sm:hidden">30+</span>
                 </div>
               </motion.div>
