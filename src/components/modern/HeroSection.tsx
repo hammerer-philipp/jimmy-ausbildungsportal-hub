@@ -135,7 +135,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex justify-center"
+            className="relative flex justify-center pb-16 lg:pb-0"
           >
             <div className="relative perspective-1000">
               {/* 3D iPhone mit realistischem Design */}
@@ -172,12 +172,12 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.5 }}
-                            className="absolute inset-0"
+                            className="absolute inset-2 rounded-[2rem] overflow-hidden"
                           >
                             <img 
                               src="/lovable-uploads/c39fab07-5064-4f44-adf1-1afe5283f533.png" 
                               alt="Jimmy Login Screen"
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-contain"
                             />
                           </motion.div>
                         )}
@@ -190,12 +190,12 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -300 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0"
+                            className="absolute inset-2 rounded-[2rem] overflow-hidden"
                           >
                             <img 
                               src="/lovable-uploads/69ba809c-ac86-40fa-ab27-8a77d16523ff.png" 
                               alt="Jimmy Jobinterview Screen"
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-contain"
                             />
                           </motion.div>
                         )}
@@ -208,12 +208,12 @@ export const HeroSection = () => {
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -300 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="absolute inset-0"
+                            className="absolute inset-2 rounded-[2rem] overflow-hidden"
                           >
                             <img 
                               src="/lovable-uploads/fd22411e-071f-4658-913d-24e9866ce1f9.png" 
                               alt="Bewerbungs-Chat Screen"
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-contain"
                             />
                           </motion.div>
                         )}
