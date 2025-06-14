@@ -29,20 +29,11 @@ const Footer = () => {
               Das innovative Portal, das den Bewerbungsprozess umdreht. 
               Unternehmen bewerben sich bei talentierten Schülern.
             </p>
-            <div className="space-y-2 text-sm">
-              <div className="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
-                <div className="flex items-center space-x-2 text-foreground">
-                  <MapPin size={16} className="text-jimmy-gold" />
-                  <span>Königsmoos, Bayern</span>
-                </div>
-                <div className="flex items-center space-x-2 text-foreground">
-                  <Mail size={16} className="text-jimmy-gold" />
-                  <span>info@jimmy-portal.de</span>
-                </div>
-                <div className="flex items-center space-x-2 text-foreground">
-                  <Phone size={16} className="text-jimmy-gold" />
-                  <span>+49 (0) 123 456789</span>
-                </div>
+            <div className="text-sm">
+              <div className="flex flex-col md:flex-row md:items-center md:space-x-8 space-y-1 md:space-y-0 text-foreground">
+                <span>Königsmoos, Bayern</span>
+                <span>info@jimmy-portal.de</span>
+                <span>+49 (0) 123 456789</span>
               </div>
             </div>
           </motion.div>
