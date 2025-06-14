@@ -204,6 +204,72 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Einfache <span className="text-jimmy-gold">Preise</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Transparent und fair für alle Beteiligten
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Student Pricing */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <Card className="border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 hover:shadow-lg h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="mb-6">
+                    <Users className="w-12 h-12 text-jimmy-gold mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold mb-2">Für Schüler</h3>
+                    <div className="text-5xl font-bold text-jimmy-gold mb-2">Kostenlos</div>
+                    <p className="text-muted-foreground">Für immer kostenfrei</p>
+                  </div>
+                  <Button className="w-full bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group">
+                    Jetzt registrieren
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Company Pricing */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <Card className="border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 hover:shadow-lg h-full">
+                <CardContent className="p-8 text-center">
+                  <div className="mb-6">
+                    <Building2 className="w-12 h-12 text-jimmy-gold mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold mb-2">Für Unternehmen</h3>
+                    <div className="text-5xl font-bold text-jimmy-gold mb-2">600€</div>
+                    <p className="text-muted-foreground">pro Jahr</p>
+                  </div>
+                  <Button variant="outline" className="w-full border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
+                    Mehr erfahren
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-jimmy-gold/10 to-yellow-400/10">
         <div className="container mx-auto px-4 text-center">

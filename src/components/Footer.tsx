@@ -1,79 +1,130 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Newsletter from './Newsletter';
+import { Button } from './ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-jimmy-footer text-jimmy-gold">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-muted/50 to-background border-t border-border/40">
+      <div className="container mx-auto px-4 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Jimmy das Ausbildungsportal</h3>
-            <p className="text-sm mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-4"
+          >
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-jimmy-gold to-yellow-400 rounded-lg flex items-center justify-center">
+                <span className="text-jimmy-header font-bold text-lg">J</span>
+              </div>
+              <h3 className="text-xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-400 bg-clip-text text-transparent">
+                Jimmy
+              </h3>
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Das innovative Portal, das den Bewerbungsprozess umdreht. 
               Unternehmen bewerben sich bei talentierten Schülern.
             </p>
             <div className="space-y-2 text-sm">
-              <div className="flex items-center space-x-2">
-                <MapPin size={14} />
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <MapPin size={16} className="text-jimmy-gold" />
                 <span>Königsmoos, Bayern</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail size={14} />
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <Mail size={16} className="text-jimmy-gold" />
                 <span>info@jimmy-portal.de</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone size={14} />
+              <div className="flex items-center space-x-2 text-muted-foreground">
+                <Phone size={16} className="text-jimmy-gold" />
                 <span>+49 (0) 123 456789</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* For Students */}
-          <div>
-            <h4 className="font-semibold mb-4">Für Schüler</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/faq-schueler" className="hover:text-yellow-300">FAQ</Link></li>
-              <li><Link to="/preise" className="hover:text-yellow-300">Kostenlose Registrierung</Link></li>
-              <li><Link to="#" className="hover:text-yellow-300">Profil erstellen</Link></li>
-              <li><Link to="#" className="hover:text-yellow-300">Bewerbungen verwalten</Link></li>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            <h4 className="font-semibold mb-4 text-foreground">Für Schüler</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/faq-schueler" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                  FAQ
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                  Kostenlose Registrierung
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* For Companies */}
-          <div>
-            <h4 className="font-semibold mb-4">Für Unternehmen</h4>
-            <ul className="space-y-2 text-sm">
-              <li><Link to="/faq-unternehmen" className="hover:text-yellow-300">FAQ</Link></li>
-              <li><Link to="/preise" className="hover:text-yellow-300">Preise</Link></li>
-              <li><Link to="#" className="hover:text-yellow-300">Talente finden</Link></li>
-              <li><Link to="#" className="hover:text-yellow-300">Unternehmensprofil</Link></li>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <h4 className="font-semibold mb-4 text-foreground">Für Unternehmen</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link to="/faq-unternehmen" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                  FAQ
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </li>
+              <li>
+                <Link to="/preise" className="text-muted-foreground hover:text-jimmy-gold transition-colors flex items-center group">
+                  Preise
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Newsletter */}
-          <div>
-            <h4 className="font-semibold mb-4">Newsletter</h4>
-            <p className="text-sm mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <h4 className="font-semibold mb-4 text-foreground">Newsletter</h4>
+            <p className="text-sm text-muted-foreground mb-4">
               Bleiben Sie auf dem Laufenden über Neuigkeiten und Updates.
             </p>
             <Newsletter />
-          </div>
+          </motion.div>
         </div>
 
-        <hr className="border-jimmy-gold/20 my-8" />
-
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-sm">
+        {/* Bottom Section */}
+        <div className="border-t border-border/40 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-muted-foreground">
               © 2024 Jimmy UG (haftungsbeschränkt). Alle Rechte vorbehalten.
-            </p>
-          </div>
-          <div className="flex space-x-6 text-sm">
-            <Link to="/impressum" className="hover:text-yellow-300">Impressum</Link>
-            <Link to="/datenschutz" className="hover:text-yellow-300">Datenschutz</Link>
-            <Link to="/agb" className="hover:text-yellow-300">AGB</Link>
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link to="/impressum" className="text-muted-foreground hover:text-jimmy-gold transition-colors">
+                Impressum
+              </Link>
+              <Link to="/datenschutz" className="text-muted-foreground hover:text-jimmy-gold transition-colors">
+                Datenschutz
+              </Link>
+              <Link to="/agb" className="text-muted-foreground hover:text-jimmy-gold transition-colors">
+                AGB
+              </Link>
+            </div>
           </div>
         </div>
       </div>
