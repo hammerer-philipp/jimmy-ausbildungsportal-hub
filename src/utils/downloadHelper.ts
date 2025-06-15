@@ -1,52 +1,68 @@
 
 export const downloadFile = async (url: string, filename?: string) => {
   try {
-    // Ersten Versuch: Fetch mit Blob (funktioniert bei CORS-fähigen Servern)
+    console.log('Attempting to download:', url);
+    
+    // Versuche zuerst eine normale Fetch-Anfrage
     const response = await fetch(url, {
       method: 'GET',
       mode: 'cors',
     });
     
     if (!response.ok) {
-      throw new Error('Download failed');
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    const blob = await response.blob();
-    const downloadUrl = window.URL.createObjectURL(blob);
+    // Hole den Content-Type um den Dateityp zu bestimmen
+    const contentType = response.headers.get('content-type') || '';
+    console.log('Content-Type:', contentType);
     
+    // Konvertiere die Response zu einem Blob
+    const blob = await response.blob();
+    console.log('Blob size:', blob.size);
+    
+    // Erstelle eine neue Blob mit explizitem MIME-Type für Download
+    const downloadBlob = new Blob([blob], { 
+      type: 'application/octet-stream' // Dies zwingt den Browser zum Download
+    });
+    
+    // Erstelle Download URL
+    const downloadUrl = window.URL.createObjectURL(downloadBlob);
+    
+    // Erstelle temporären Download-Link
     const link = document.createElement('a');
     link.href = downloadUrl;
     link.download = filename || url.split('/').pop() || 'download';
     link.style.display = 'none';
+    
+    // Füge Link zum DOM hinzu und klicke ihn
     document.body.appendChild(link);
     link.click();
     
-    // Clean up
+    // Aufräumen
     document.body.removeChild(link);
     window.URL.revokeObjectURL(downloadUrl);
     
-  } catch (error) {
-    console.error('Fetch download failed, trying alternative method:', error);
+    console.log('Download successful');
     
-    // Fallback: Direkter Download-Link mit erzwungenen Headers
+  } catch (error) {
+    console.error('Download failed:', error);
+    
+    // Fallback: Erstelle einen Download-Link mit download-Attribut
     const link = document.createElement('a');
     link.href = url;
     link.download = filename || url.split('/').pop() || 'download';
-    link.style.display = 'none';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
     
-    // Zusätzliche Attribute für erzwungenen Download
-    link.setAttribute('target', '_blank');
-    link.setAttribute('rel', 'noopener noreferrer');
-    
+    // Versuche den Download trotzdem
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     
-    // Wenn das auch nicht funktioniert, zeige eine Nachricht
+    // Informiere den Benutzer
     setTimeout(() => {
-      if (confirm('Der automatische Download hat möglicherweise nicht funktioniert. Soll die Datei in einem neuen Tab geöffnet werden?')) {
-        window.open(url, '_blank');
-      }
-    }, 1000);
+      alert('Falls der Download nicht automatisch gestartet ist, klicken Sie mit der rechten Maustaste auf den Link und wählen Sie "Ziel speichern unter..."');
+    }, 500);
   }
 };
