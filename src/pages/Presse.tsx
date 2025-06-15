@@ -214,12 +214,14 @@ const Presse = () => {
                   <CardContent>
                     <div className="space-y-3">
                       <p><strong>E-Mail:</strong> kontakt@jimmy-ausbildung.de</p>
-                      <p><strong>Telefon:</strong> +49 (0) 123 456789</p>
-                      <p><strong>Ansprechpartner:</strong> Marketing Team</p>
+                      <p><strong>Telefon:</strong> +49 151 57952359</p>
+                      <p><strong>Ansprechpartner:</strong> Philipp Hammerer</p>
                     </div>
-                    <Button className="w-full mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header">
-                      Presseanfrage stellen
-                    </Button>
+                    <a href="mailto:kontakt@jimmy-ausbildung.de">
+  <button className="w-full mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header">
+    Presseanfrage stellen
+  </button>
+</a>
                   </CardContent>
                 </Card>
               </motion.div>
