@@ -213,7 +213,7 @@ const Presse = () => {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      <p><strong>E-Mail:</strong> presse@jimmy-portal.de</p>
+                      <p><strong>E-Mail:</strong> kontakt@jimmy-ausbildung.de</p>
                       <p><strong>Telefon:</strong> +49 (0) 123 456789</p>
                       <p><strong>Ansprechpartner:</strong> Marketing Team</p>
                     </div>
