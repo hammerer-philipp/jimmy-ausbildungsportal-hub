@@ -409,7 +409,7 @@ const Index = () => {
                   
                   <Button variant="outline" className="w-full border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header" asChild>
                     <a href="https://jimmyausbildung.de" target="_blank" rel="noopener noreferrer">
-                      14 Tage kostenlos testen
+                      Jetzt starten
                     </a>
                   </Button>
                 </CardContent>
