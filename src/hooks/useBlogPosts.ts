@@ -10,7 +10,7 @@ export const useBlogPosts = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await fetch('https://jimmy-marken.de/api.php');
+        const response = await fetch('https://jimmy-marken.de/newwww/api.php');
         if (!response.ok) {
           throw new Error('Failed to fetch blog posts');
         }
