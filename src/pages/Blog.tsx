@@ -29,7 +29,7 @@ const Blog = () => {
       excerpt: "Erfahren Sie, wie unser innovatives Portal Schülern und Unternehmen hilft, zueinander zu finden.",
       author: "Jimmy Team",
       date: "2024-01-15",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=800&auto=format&fit=crop",
       readTime: "5 Min",
       content: "In der heutigen schnelllebigen Welt ist es für Schüler oft eine Herausforderung, den richtigen Ausbildungsplatz zu finden, und für Unternehmen ebenso schwierig, passende Kandidaten zu entdecken. Jimmy Ausbildung wurde ins Leben gerufen, um genau diese Lücke zu schließen. Unsere Plattform nutzt intelligente Algorithmen, um Profile von Schülern mit den Anforderungen von Unternehmen abzugleichen. Das Ergebnis? Ein effizienterer, transparenter und erfolgreicherer Bewerbungsprozess für beide Seiten. Schüler können ihre Stärken und Interessen präsentieren, während Unternehmen gezielt nach den Talenten suchen können, die sie für ihre Zukunft benötigen. So wird aus der oft mühsamen Suche eine spannende Entdeckungsreise."
     },
@@ -39,7 +39,7 @@ const Blog = () => {
       excerpt: "So erstellen Sie ein Profil, das Arbeitgeber überzeugt und Ihre Stärken hervorhebt.",
       author: "Sarah Miller",
       date: "2024-01-10",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=800&auto=format&fit=crop",
       readTime: "3 Min",
       content: "Ein aussagekräftiges Profil ist Ihre digitale Visitenkarte auf Jimmy. Hier sind einige Tipps, um es zum Glänzen zu bringen: 1. Seien Sie authentisch: Zeigen Sie, wer Sie sind und was Sie begeistert. 2. Heben Sie Ihre Fähigkeiten hervor: Egal ob schulische Leistungen, Praktika oder Hobbys – jede Erfahrung zählt. 3. Ein professionelles Foto: Ein freundliches und professionelles Bild macht einen guten ersten Eindruck. 4. Seien Sie präzise: Beschreiben Sie klar und deutlich, was Sie suchen und was Sie anbieten. Ein gut gepflegtes Profil erhöht Ihre Chancen, von Top-Unternehmen entdeckt zu werden, erheblich."
     },
@@ -49,7 +49,7 @@ const Blog = () => {
       excerpt: "Erfolgsgeschichten von Unternehmen, die bereits über Jimmy ihre Auszubildenden gefunden haben.",
       author: "Max Weber",
       date: "2024-01-05",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
       readTime: "7 Min",
       content: "Immer mehr Unternehmen erkennen das Potenzial von Jimmy Ausbildung, um ihre zukünftigen Fachkräfte zu finden. Die Mustermann GmbH, ein mittelständisches Technologieunternehmen, berichtet: 'Dank Jimmy haben wir innerhalb von Wochen zwei hochmotivierte Auszubildende für unser IT-Team gefunden. Der Prozess war unkompliziert und die Qualität der Bewerber hervorragend.' Auch die Kreativagentur Visionär & Co. teilt ihre positive Erfahrung: 'Wir konnten gezielt nach kreativen Köpfen suchen und haben Talente entdeckt, die wir über traditionelle Wege nie erreicht hätten.' Diese Geschichten zeigen, dass Jimmy nicht nur ein Portal ist, sondern ein echter Partner für den Unternehmenserfolg."
     }
@@ -90,7 +90,7 @@ const Blog = () => {
                   transition={{ delay: index * 0.1 }}
                 >
                   <Card className="border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 hover:shadow-lg group h-full flex flex-col">
-                    <div className="aspect-video bg-gradient-to-br from-jimmy-gold/10 to-yellow-400/10 rounded-t-lg"></div>
+                    <img src={post.image} alt={post.title} className="aspect-video object-cover rounded-t-lg" />
                     <CardHeader>
                       <CardTitle className="text-xl group-hover:text-jimmy-gold transition-colors">
                         {post.title}
