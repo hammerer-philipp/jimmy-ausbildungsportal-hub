@@ -244,7 +244,7 @@ const Presse = () => {
                       <p><strong>Sitz:</strong> Königsmoos, Bayern</p>
                       <p><strong>Gegründet:</strong> 2023</p>
                       <p><strong>Branche:</strong> EdTech / HR-Tech</p>
-                      <p><strong>Mitarbeiter:</strong> 5-10</p>
+                      <p><strong>Mitarbeiter:</strong> 1</p>
                     </div>
                     <Button variant="outline" className="w-full mt-6 border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
                       Weitere Infos anfordern
