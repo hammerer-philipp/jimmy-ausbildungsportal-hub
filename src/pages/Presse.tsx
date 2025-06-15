@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Download, Calendar, Newspaper, FileText, Image, Loader2 } from 'lucide-react';
 import { usePresseData } from '@/hooks/usePresseData';
+import { downloadFile } from '@/utils/downloadHelper';
 
 const Presse = () => {
   const { presseMitteilungen, presseKit, loading, error } = usePresseData();
@@ -109,7 +110,7 @@ const Presse = () => {
                       <CardContent>
                         <Button 
                           className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group"
-                          onClick={() => window.open(mitteilung.pdf_url, '_blank')}
+                          onClick={() => downloadFile(mitteilung.pdf_url, `${mitteilung.title}.pdf`)}
                         >
                           <Download size={16} className="mr-2" />
                           PDF herunterladen
@@ -171,7 +172,7 @@ const Presse = () => {
                           <Button 
                             size="sm" 
                             className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold"
-                            onClick={() => window.open(item.file_url, '_blank')}
+                            onClick={() => downloadFile(item.file_url, item.name)}
                           >
                             <Download size={14} />
                           </Button>
