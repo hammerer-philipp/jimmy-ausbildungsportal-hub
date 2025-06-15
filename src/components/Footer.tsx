@@ -24,8 +24,8 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              So einfach Bewerben wie noch nie!
-              So einfach war HR noch nie!
+              <span className="block">So einfach Bewerben wie noch nie!</span>
+              <span className="block">So einfach war HR noch nie!</span>
             </p>
             <div className="text-sm">
               <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-8 space-y-2 xl:space-y-0 text-foreground dark:text-white">
