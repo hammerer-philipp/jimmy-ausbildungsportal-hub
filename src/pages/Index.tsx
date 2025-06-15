@@ -1,3 +1,4 @@
+
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import { HeroSection } from '@/components/modern/HeroSection';
 import Footer from '@/components/Footer';
@@ -203,10 +204,18 @@ const Index = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center justify-center p-8 bg-background rounded-xl shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 h-32"
             >
-              <div className="text-center w-full">
-                <div className="text-lg font-bold text-blue-600 mb-1">EDEKA</div>
-                <div className="text-sm text-muted-foreground">Südbayern</div>
-              </div>
+              <a 
+                href="https://verbund.edeka/s%C3%BCdbayern/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full h-full flex items-center justify-center"
+              >
+                <img 
+                  src="/lovable-uploads/63fe33d0-1052-4714-90aa-958eff0ef9a4.png" 
+                  alt="EDEKA Südbayern" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </a>
             </motion.div>
 
             {/* Backstube Wünsche */}
@@ -214,10 +223,18 @@ const Index = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center justify-center p-8 bg-background rounded-xl shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 h-32"
             >
-              <div className="text-center w-full">
-                <div className="text-lg font-bold text-amber-600 mb-1">Backstube</div>
-                <div className="text-sm text-muted-foreground">Wünsche</div>
-              </div>
+              <a 
+                href="https://www.backstube-wuensche.de/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full h-full flex items-center justify-center"
+              >
+                <img 
+                  src="/lovable-uploads/f2cccf4d-e8d4-47ff-ba83-31d34341aaf7.png" 
+                  alt="Backstube Wünsche" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </a>
             </motion.div>
 
             {/* Südbayerische Fleischwaren */}
@@ -225,10 +242,18 @@ const Index = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center justify-center p-8 bg-background rounded-xl shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 h-32"
             >
-              <div className="text-center w-full">
-                <div className="text-lg font-bold text-red-600 mb-1">Südbayerische</div>
-                <div className="text-sm text-muted-foreground">Fleischwaren</div>
-              </div>
+              <a 
+                href="https://www.suedbayerische-fleischwaren.de/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full h-full flex items-center justify-center"
+              >
+                <img 
+                  src="/lovable-uploads/e36d7e0c-57ba-4d6e-af35-4ef31acf2edc.png" 
+                  alt="Südbayerische Fleischwaren" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </a>
             </motion.div>
 
             {/* Goldmilch */}
@@ -236,9 +261,18 @@ const Index = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center justify-center p-8 bg-background rounded-xl shadow-sm border border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 h-32"
             >
-              <div className="text-center w-full">
-                <div className="text-lg font-bold text-jimmy-gold mb-1">Goldmilch</div>
-              </div>
+              <a 
+                href="https://www.goldmilch.de/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full h-full flex items-center justify-center"
+              >
+                <img 
+                  src="/lovable-uploads/067ea29c-252c-4eb3-85dc-ad0c53f16893.png" 
+                  alt="Goldmilch" 
+                  className="max-w-full max-h-full object-contain"
+                />
+              </a>
             </motion.div>
           </motion.div>
         </div>
