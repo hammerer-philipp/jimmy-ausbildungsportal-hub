@@ -217,11 +217,11 @@ const Presse = () => {
                       <p><strong>Telefon:</strong> +49 151 57952359</p>
                       <p><strong>Ansprechpartner:</strong> Philipp Hammerer</p>
                     </div>
-                    <a href="mailto:kontakt@jimmy-ausbildung.de">
-  <button className="w-full mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header">
-    Presseanfrage stellen
-  </button>
-</a>
+                  <a href="mailto:kontakt@jimmy-ausbildung.de">
+                    <Button className="w-full mt-6 bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header">
+                      Presseanfrage stellen
+                    </Button>
+                  </a>
                   </CardContent>
                 </Card>
               </motion.div>
