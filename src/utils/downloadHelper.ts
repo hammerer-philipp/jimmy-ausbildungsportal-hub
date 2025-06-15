@@ -1,68 +1,46 @@
 
+
 export const downloadFile = async (url: string, filename?: string) => {
+  console.log('Attempting to download:', url);
+  
   try {
-    console.log('Attempting to download:', url);
-    
-    // Versuche zuerst eine normale Fetch-Anfrage
-    const response = await fetch(url, {
-      method: 'GET',
-      mode: 'cors',
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    
-    // Hole den Content-Type um den Dateityp zu bestimmen
-    const contentType = response.headers.get('content-type') || '';
-    console.log('Content-Type:', contentType);
-    
-    // Konvertiere die Response zu einem Blob
-    const blob = await response.blob();
-    console.log('Blob size:', blob.size);
-    
-    // Erstelle eine neue Blob mit explizitem MIME-Type für Download
-    const downloadBlob = new Blob([blob], { 
-      type: 'application/octet-stream' // Dies zwingt den Browser zum Download
-    });
-    
-    // Erstelle Download URL
-    const downloadUrl = window.URL.createObjectURL(downloadBlob);
-    
-    // Erstelle temporären Download-Link
+    // Erstelle temporären Download-Link mit download-Attribut
     const link = document.createElement('a');
-    link.href = downloadUrl;
-    link.download = filename || url.split('/').pop() || 'download';
-    link.style.display = 'none';
+    link.href = url;
     
-    // Füge Link zum DOM hinzu und klicke ihn
+    // Generiere Dateinamen falls nicht gegeben
+    const downloadFilename = filename || url.split('/').pop()?.split('?')[0] || 'download';
+    link.download = downloadFilename;
+    
+    // Setze Attribute für erzwungenen Download
+    link.style.display = 'none';
+    link.target = '_self'; // Verhindert neues Tab
+    
+    // Füge Link temporär zum DOM hinzu
     document.body.appendChild(link);
+    
+    // Simuliere Klick für Download
     link.click();
     
-    // Aufräumen
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(downloadUrl);
+    // Entferne Link nach kurzer Verzögerung
+    setTimeout(() => {
+      if (document.body.contains(link)) {
+        document.body.removeChild(link);
+      }
+    }, 100);
     
-    console.log('Download successful');
+    console.log('Download initiated successfully');
     
   } catch (error) {
     console.error('Download failed:', error);
     
-    // Fallback: Erstelle einen Download-Link mit download-Attribut
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = filename || url.split('/').pop() || 'download';
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
+    // Letzter Fallback: Öffne in neuem Tab mit Hinweis
+    window.open(url, '_blank', 'noopener,noreferrer');
     
-    // Versuche den Download trotzdem
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Informiere den Benutzer
+    // Zeige Benutzerhinweis nach kurzer Verzögerung
     setTimeout(() => {
-      alert('Falls der Download nicht automatisch gestartet ist, klicken Sie mit der rechten Maustaste auf den Link und wählen Sie "Ziel speichern unter..."');
+      alert('Bitte klicken Sie mit der rechten Maustaste auf die geöffnete Datei und wählen Sie "Speichern unter..." um sie herunterzuladen.');
     }, 500);
   }
 };
+
