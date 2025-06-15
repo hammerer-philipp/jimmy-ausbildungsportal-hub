@@ -1,3 +1,4 @@
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../ui/button';
 import { ArrowRight, Play, Users, Building2, Trophy } from 'lucide-react';
@@ -64,8 +65,8 @@ export const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-muted-foreground leading-relaxed max-w-lg"
             >
-              Das innovative Ausbildungsportal, das den Bewerbungsprozess revolutioniert. 
-              Erstelle dein Profil und lass Unternehmen auf dich zukommen.
+              Mit Jimmy wird der Bewerbungsprozess revolutioniert. 
+              Schreibe kurz mit unserem Chatbot und warte danach bis sich Unternehmen bei dir melden.
             </motion.p>
 
             {/* Stats */}
