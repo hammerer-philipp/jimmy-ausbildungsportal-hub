@@ -4,10 +4,7 @@ import { useState, useEffect } from 'react';
 export interface PresseMitteilung {
   id: number;
   title: string;
-  date: string;
-  excerpt: string;
-  content?: string;
-  pdf_url?: string;
+  pdf_url: string;
   created_at: string;
 }
 
@@ -39,7 +36,6 @@ export const usePresseData = () => {
         const data = await response.json();
         console.log('Presse API data received:', data);
         
-        // Annahme: API gibt ein Objekt mit pressemitteilungen und pressekit Arrays zurück
         if (data.pressemitteilungen) {
           setPresseMitteilungen(data.pressemitteilungen);
         }
@@ -52,21 +48,47 @@ export const usePresseData = () => {
         console.error('Error fetching presse data:', err);
         setError('Fehler beim Laden der Pressedaten');
         
-        // Fallback Mock-Daten
+        // Fallback Mock-Daten mit den spezifischen Dateien
         setPresseMitteilungen([
           {
             id: 1,
             title: "Jimmy revolutioniert den Ausbildungsmarkt in Bayern",
-            date: "2024-01-20",
-            excerpt: "Das Königsmooser Startup Jimmy UG verzeichnet bereits 30 registrierte Schüler und mehrere Partnerunternehmen.",
-            pdf_url: "#",
+            pdf_url: "presse/mitteilungen/jimmy_ausbildungsmarkt_bayern.pdf",
             created_at: "2024-01-20"
+          },
+          {
+            id: 2,
+            title: "Neue Partnerschaft mit regionalen Unternehmen",
+            pdf_url: "presse/mitteilungen/jimmy_partnerschaften.pdf",
+            created_at: "2024-02-15"
           }
         ]);
         
         setPresseKit([
-          { id: 1, name: "Jimmy Logo (PNG)", file_url: "#", file_size: "2.3 MB", file_type: "image" as const },
-          { id: 2, name: "Unternehmensbroschüre", file_url: "#", file_size: "4.2 MB", file_type: "document" as const }
+          {
+            id: 1,
+            name: "Jimmy Logo (PNG)",
+            file_url: "presse/assets/jimmy_logo.png",
+            file_size: "245 KB",
+            file_type: "image" as const,
+            description: "Hochauflösendes Logo im PNG-Format"
+          },
+          {
+            id: 2,
+            name: "Jimmy Logo (SVG)",
+            file_url: "presse/assets/jimmy_logo.svg",
+            file_size: "12 KB",
+            file_type: "image" as const,
+            description: "Vektorlogo im SVG-Format"
+          },
+          {
+            id: 3,
+            name: "Jimmy Ausbildung Flyer",
+            file_url: "presse/assets/jimmy_ausbildung_flyer.pdf",
+            file_size: "1.8 MB",
+            file_type: "document" as const,
+            description: "Informationsflyer über Jimmy"
+          }
         ]);
       } finally {
         setLoading(false);

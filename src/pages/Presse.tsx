@@ -1,10 +1,9 @@
-
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Download, ExternalLink, Calendar, Newspaper, FileText, Image, Users, Loader2 } from 'lucide-react';
+import { Download, Calendar, Newspaper, FileText, Image, Users, Loader2 } from 'lucide-react';
 import { usePresseData } from '@/hooks/usePresseData';
 
 const Presse = () => {
@@ -95,31 +94,19 @@ const Presse = () => {
                         <div className="flex items-center space-x-2 text-muted-foreground">
                           <Calendar size={16} />
                           <span className="text-sm">
-                            {new Date(mitteilung.date).toLocaleDateString('de-DE')}
+                            {new Date(mitteilung.created_at).toLocaleDateString('de-DE')}
                           </span>
                         </div>
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground mb-4">{mitteilung.excerpt}</p>
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        {mitteilung.pdf_url && mitteilung.pdf_url !== '#' && (
-                          <Button 
-                            className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group"
-                            onClick={() => window.open(mitteilung.pdf_url, '_blank')}
-                          >
-                            <Download size={16} className="mr-2" />
-                            PDF herunterladen
-                          </Button>
-                        )}
-                        <Button 
-                          variant="outline" 
-                          className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header"
-                        >
-                          <ExternalLink size={16} className="mr-2" />
-                          Online lesen
-                        </Button>
-                      </div>
+                      <Button 
+                        className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group"
+                        onClick={() => window.open(mitteilung.pdf_url, '_blank')}
+                      >
+                        <Download size={16} className="mr-2" />
+                        PDF herunterladen
+                      </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -151,11 +138,6 @@ const Presse = () => {
             >
               <Card className="border-border/40 max-w-4xl mx-auto">
                 <CardContent className="p-8">
-                  <p className="text-muted-foreground mb-6 text-center">
-                    Laden Sie unser vollständiges Presse-Kit mit Logos, Screenshots und 
-                    Unternehmensinformationen herunter.
-                  </p>
-                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {presseKit.map((item, index) => (
                       <motion.div
@@ -175,13 +157,15 @@ const Presse = () => {
                           <div>
                             <p className="font-medium">{item.name}</p>
                             <p className="text-sm text-muted-foreground">{item.file_size}</p>
+                            {item.description && (
+                              <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
+                            )}
                           </div>
                         </div>
                         <Button 
                           size="sm" 
                           className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold"
                           onClick={() => window.open(item.file_url, '_blank')}
-                          disabled={!item.file_url || item.file_url === '#'}
                         >
                           <Download size={14} />
                         </Button>
