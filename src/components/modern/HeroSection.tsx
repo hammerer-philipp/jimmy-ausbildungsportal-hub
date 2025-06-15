@@ -41,7 +41,7 @@ export const HeroSection = () => {
               className="inline-flex items-center space-x-2 bg-jimmy-gold/10 border border-jimmy-gold/20 rounded-full px-4 py-2"
             >
               <Trophy className="w-4 h-4 text-jimmy-gold" />
-              <span className="text-sm font-medium text-jimmy-gold">Der umgekehrte Bewerbungsprozess</span>
+              <span className="text-sm font-medium text-jimmy-gold">So einfach war bewerben noch nie</span>
             </motion.div>
 
             {/* Headline */}
