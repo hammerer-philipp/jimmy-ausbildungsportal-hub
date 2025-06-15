@@ -42,7 +42,7 @@ export const useBlogPosts = () => {
     const fetchBlogPosts = async () => {
       try {
         console.log('Attempting to fetch from API...');
-        const response = await fetch('https://jimmy-marken.de/newwww/api.php');
+        const response = await fetch('https://jimmy-marken.de/api.php');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
