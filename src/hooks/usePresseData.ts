@@ -14,6 +14,7 @@ export interface PresseKitItem {
   file_url: string;
   file_size: string;
   file_type: 'image' | 'document';
+  category: 'logos' | 'documents' | 'screenshots';
   description?: string;
 }
 
@@ -36,60 +37,19 @@ export const usePresseData = () => {
         const data = await response.json();
         console.log('Presse API data received:', data);
         
-        if (data.pressemitteilungen) {
+        // Nur echte Daten laden, keine Fallback-Beispiele
+        if (data.pressemitteilungen && Array.isArray(data.pressemitteilungen)) {
           setPresseMitteilungen(data.pressemitteilungen);
         }
         
-        if (data.pressekit) {
+        if (data.pressekit && Array.isArray(data.pressekit)) {
           setPresseKit(data.pressekit);
         }
         
       } catch (err) {
         console.error('Error fetching presse data:', err);
         setError('Fehler beim Laden der Pressedaten');
-        
-        // Fallback Mock-Daten mit den spezifischen Dateien
-        setPresseMitteilungen([
-          {
-            id: 1,
-            title: "Jimmy revolutioniert den Ausbildungsmarkt in Bayern",
-            pdf_url: "presse/mitteilungen/jimmy_ausbildungsmarkt_bayern.pdf",
-            created_at: "2024-01-20"
-          },
-          {
-            id: 2,
-            title: "Neue Partnerschaft mit regionalen Unternehmen",
-            pdf_url: "presse/mitteilungen/jimmy_partnerschaften.pdf",
-            created_at: "2024-02-15"
-          }
-        ]);
-        
-        setPresseKit([
-          {
-            id: 1,
-            name: "Jimmy Logo (PNG)",
-            file_url: "presse/assets/jimmy_logo.png",
-            file_size: "245 KB",
-            file_type: "image" as const,
-            description: "Hochauflösendes Logo im PNG-Format"
-          },
-          {
-            id: 2,
-            name: "Jimmy Logo (SVG)",
-            file_url: "presse/assets/jimmy_logo.svg",
-            file_size: "12 KB",
-            file_type: "image" as const,
-            description: "Vektorlogo im SVG-Format"
-          },
-          {
-            id: 3,
-            name: "Jimmy Ausbildung Flyer",
-            file_url: "presse/assets/jimmy_ausbildung_flyer.pdf",
-            file_size: "1.8 MB",
-            file_type: "document" as const,
-            description: "Informationsflyer über Jimmy"
-          }
-        ]);
+        // Keine Fallback-Daten mehr - Arrays bleiben leer
       } finally {
         setLoading(false);
       }
