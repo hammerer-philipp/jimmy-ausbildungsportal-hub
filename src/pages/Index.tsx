@@ -117,7 +117,7 @@ const Index = () => {
               
               <div className="space-y-4">
                 {[
-                  "Profil in 5 Minuten erstellen",
+                  "Durchlaufe ein 5 Minütiges Chatbot-Interview",
                   "Unternehmen bewerben sich bei dir",
                   "Du wählst den besten Ausbildungsplatz"
                 ].map((step, index) => (
