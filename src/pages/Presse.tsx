@@ -246,9 +246,6 @@ const Presse = () => {
                       <p><strong>Branche:</strong> EdTech / HR-Tech</p>
                       <p><strong>Mitarbeiter:</strong> 1</p>
                     </div>
-                    <Button variant="outline" className="w-full mt-6 border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
-                      Weitere Infos anfordern
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
