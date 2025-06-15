@@ -1,41 +1,31 @@
+
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Download, ExternalLink, Calendar, Newspaper, FileText, Image, Users } from 'lucide-react';
+import { Download, ExternalLink, Calendar, Newspaper, FileText, Image, Users, Loader2 } from 'lucide-react';
+import { usePresseData } from '@/hooks/usePresseData';
 
 const Presse = () => {
-  const presseMitteilungen = [
-    {
-      id: 1,
-      title: "Jimmy revolutioniert den Ausbildungsmarkt in Bayern",
-      date: "2024-01-20",
-      excerpt: "Das Königsmooser Startup Jimmy UG verzeichnet bereits 30 registrierte Schüler und mehrere Partnerunternehmen.",
-      downloadUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Erfolgreiche Seed-Finanzierung für Jimmy das Ausbildungsportal",
-      date: "2023-12-15",
-      excerpt: "Das innovative Startup aus Bayern sichert sich Investitionen für die Weiterentwicklung der Plattform.",
-      downloadUrl: "#"
-    },
-    {
-      id: 3,
-      title: "Partnerschaft mit regionalen Unternehmen gestartet",
-      date: "2023-11-30",
-      excerpt: "Jimmy kooperiert mit führenden Unternehmen in Bayern für eine moderne Ausbildungsplatz-Vermittlung.",
-      downloadUrl: "#"
-    }
-  ];
+  const { presseMitteilungen, presseKit, loading, error } = usePresseData();
 
-  const presseKit = [
-    { name: "Jimmy Logo (PNG)", url: "#", size: "2.3 MB", icon: Image },
-    { name: "Jimmy Logo (SVG)", url: "#", size: "145 KB", icon: Image },
-    { name: "Produktscreenshots", url: "#", size: "8.7 MB", icon: Image },
-    { name: "Unternehmensbroschüre", url: "#", size: "4.2 MB", icon: FileText }
-  ];
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <ModernHeader />
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16">
+            <div className="flex items-center justify-center">
+              <Loader2 className="w-8 h-8 animate-spin text-jimmy-gold" />
+              <span className="ml-2 text-lg">Lade Pressedaten...</span>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -60,6 +50,17 @@ const Presse = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Error Message */}
+        {error && (
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-center">
+                <p className="text-yellow-800">{error} - Zeige Beispieldaten</p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Pressemitteilungen */}
         <section className="py-16">
@@ -102,13 +103,15 @@ const Presse = () => {
                     <CardContent>
                       <p className="text-muted-foreground mb-4">{mitteilung.excerpt}</p>
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <Button 
-                          className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group"
-                          onClick={() => window.open(mitteilung.downloadUrl, '_blank')}
-                        >
-                          <Download size={16} className="mr-2" />
-                          PDF herunterladen
-                        </Button>
+                        {mitteilung.pdf_url && mitteilung.pdf_url !== '#' && (
+                          <Button 
+                            className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header group"
+                            onClick={() => window.open(mitteilung.pdf_url, '_blank')}
+                          >
+                            <Download size={16} className="mr-2" />
+                            PDF herunterladen
+                          </Button>
+                        )}
                         <Button 
                           variant="outline" 
                           className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header"
@@ -156,7 +159,7 @@ const Presse = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {presseKit.map((item, index) => (
                       <motion.div
-                        key={index}
+                        key={item.id}
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -164,16 +167,21 @@ const Presse = () => {
                         className="flex items-center justify-between p-4 bg-muted/30 rounded-lg hover:bg-muted/50 transition-colors"
                       >
                         <div className="flex items-center space-x-3">
-                          <item.icon className="w-8 h-8 text-jimmy-gold" />
+                          {item.file_type === 'image' ? (
+                            <Image className="w-8 h-8 text-jimmy-gold" />
+                          ) : (
+                            <FileText className="w-8 h-8 text-jimmy-gold" />
+                          )}
                           <div>
                             <p className="font-medium">{item.name}</p>
-                            <p className="text-sm text-muted-foreground">{item.size}</p>
+                            <p className="text-sm text-muted-foreground">{item.file_size}</p>
                           </div>
                         </div>
                         <Button 
                           size="sm" 
                           className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header hover:from-yellow-400 hover:to-jimmy-gold"
-                          onClick={() => window.open(item.url, '_blank')}
+                          onClick={() => window.open(item.file_url, '_blank')}
+                          disabled={!item.file_url || item.file_url === '#'}
                         >
                           <Download size={14} />
                         </Button>
