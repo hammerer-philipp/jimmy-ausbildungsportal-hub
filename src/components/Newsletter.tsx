@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -19,23 +20,51 @@ const Newsletter = () => {
       return;
     }
 
-    setIsLoading(true);
-    
-    // Hier würde normalerweise die Supabase-Integration kommen
-    try {
-      // Simuliere API-Call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Erfolgreich angemeldet!",
-        description: "Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
-      });
-      
-      setEmail('');
-    } catch (error) {
+    // Einfache E-Mail-Validierung
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       toast({
         title: "Fehler",
-        description: "Bei der Anmeldung ist ein Fehler aufgetreten.",
+        description: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    
+    try {
+      const response = await fetch('https://jimmy-marken.de/newsletter_api.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          action: 'subscribe'
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        toast({
+          title: "Erfolgreich angemeldet!",
+          description: "Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+        });
+        setEmail('');
+      } else {
+        toast({
+          title: "Fehler",
+          description: data.message || "Bei der Anmeldung ist ein Fehler aufgetreten.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Newsletter API Error:', error);
+      toast({
+        title: "Fehler",
+        description: "Verbindung zur API fehlgeschlagen. Bitte versuchen Sie es später erneut.",
         variant: "destructive",
       });
     } finally {
@@ -51,6 +80,7 @@ const Newsletter = () => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="bg-background border-border focus:border-jimmy-gold dark:bg-card dark:border-border/60 dark:text-foreground"
+        required
       />
       <Button
         type="submit"
