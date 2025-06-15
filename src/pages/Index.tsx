@@ -21,7 +21,7 @@ const Index = () => {
     {
       icon: Zap,
       title: "Blitzschnell",
-      description: "Erstelle dein Profil in unter 5 Minuten und erhalte sofort Bewerbungen."
+      description: "5-Minuten Interview mit unserem Chatbot, dann warten bis sich Unternehmen bei dir melden."
     },
     {
       icon: Shield,
@@ -30,8 +30,8 @@ const Index = () => {
     },
     {
       icon: Globe,
-      title: "Deutschlandweit",
-      description: "Unternehmen aus ganz Deutschland suchen nach Talenten wie dir."
+      title: "Bayernweit",
+      description: "Unternehmen aus ganz Bayern suchen nach Talenten wie dir."
     }
   ];
 
