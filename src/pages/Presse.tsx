@@ -61,9 +61,34 @@ const Presse = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Jimmy <span className="text-jimmy-gold">Presse</span>
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-muted-foreground mb-8">
                 Aktuelle Pressemitteilungen und Medieninformationen über Jimmy das Ausbildungsportal
               </p>
+              
+              {/* Kurz-Info Übersicht */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div className="bg-muted/50 rounded-lg p-6">
+                  <Newspaper className="w-8 h-8 text-jimmy-gold mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Pressemitteilungen</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {presseMitteilungen.length} aktuelle Mitteilungen verfügbar
+                  </p>
+                </div>
+                <div className="bg-muted/50 rounded-lg p-6">
+                  <Image className="w-8 h-8 text-jimmy-gold mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Presse-Kit</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {presseKit.length} Dateien zum Download
+                  </p>
+                </div>
+                <div className="bg-muted/50 rounded-lg p-6">
+                  <FileText className="w-8 h-8 text-jimmy-gold mx-auto mb-3" />
+                  <h3 className="font-semibold mb-2">Materialien</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Logos, Flyer und weitere Materialien
+                  </p>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
