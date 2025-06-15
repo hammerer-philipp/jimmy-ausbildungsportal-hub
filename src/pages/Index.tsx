@@ -21,7 +21,7 @@ const Index = () => {
     {
       icon: Zap,
       title: "Blitzschnell",
-      description: "Nur 5 Minuten Interview mit unserem Chatbot - dann entspannt zurücklehnen und auf Bewerbungen warten."
+      description: "Schreibe 5 Minuten mit dem Chatbot Jimmy und warte danach entspannt auf Bewerbungen von Unternehmen."
     },
     {
       icon: Shield,
