@@ -1,4 +1,3 @@
-
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import { HeroSection } from '@/components/modern/HeroSection';
 import Footer from '@/components/Footer';
@@ -357,18 +356,6 @@ const Index = () => {
                         <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
                         Bewerbungen von Unternehmen erhalten
                       </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Unbegrenzte Kontaktaufnahmen
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Persönliche Beratung
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Mobile App verfügbar
-                      </li>
                     </ul>
                   </div>
                   
@@ -403,27 +390,19 @@ const Index = () => {
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       <li className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Zugang zur gesamten Schülerdatenbank
+                        unbegrenzte Azubi-Anfragen
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Unbegrenzte Bewerbungen senden
+                        unbegrenzte Praktikanten-Anfragen
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Detaillierte Schülerprofile
+                        Jährliche Abrechnung
                       </li>
                       <li className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Erweiterte Suchfilter
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Analytics und Statistiken
-                      </li>
-                      <li className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-jimmy-gold mr-2" />
-                        Prioritäts-Support
+                        Email-Support
                       </li>
                     </ul>
                   </div>
