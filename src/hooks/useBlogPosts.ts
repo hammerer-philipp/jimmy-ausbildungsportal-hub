@@ -16,16 +16,16 @@ export const useBlogPosts = () => {
         }
         const data = await response.json();
         
-        // Transform the data to match our interface and add correct image paths
+        // Transform the data to match our interface and handle missing fields
         const transformedPosts = data.map((post: any) => ({
-          id: post.id,
-          title: post.title,
-          excerpt: post.excerpt,
-          author: post.author,
-          date: post.date,
-          image: `https://jimmy-marken.de/blog/${post.image_url}`,
-          readTime: post.read_time,
-          content: post.content
+          id: post.id || Math.random(), // Fallback ID if missing
+          ...(post.title && { title: post.title }),
+          ...(post.excerpt && { excerpt: post.excerpt }),
+          ...(post.author && { author: post.author }),
+          ...(post.date && { date: post.date }),
+          ...(post.image_url && { image: `https://jimmy-marken.de/blog/${post.image_url}` }),
+          ...(post.read_time && { readTime: post.read_time }),
+          ...(post.content && { content: post.content })
         }));
         
         setBlogPosts(transformedPosts);

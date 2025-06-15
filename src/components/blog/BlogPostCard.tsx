@@ -19,33 +19,40 @@ export const BlogPostCard = ({ post, index, onPostClick }: BlogPostCardProps) =>
       transition={{ delay: index * 0.1 }}
     >
       <Card className="border-border/40 hover:border-jimmy-gold/40 transition-all duration-300 hover:shadow-lg group h-full flex flex-col">
-        <img 
-          src={post.image} 
-          alt={post.title} 
-          className="aspect-video object-cover rounded-t-lg"
-          onError={(e) => {
-            // Fallback to placeholder if image fails to load
-            e.currentTarget.src = "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=800&auto=format&fit=crop";
-          }}
-        />
+        {post.image && (
+          <img 
+            src={post.image} 
+            alt={post.title || 'Blog post'} 
+            className="aspect-video object-cover rounded-t-lg"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        )}
         <CardHeader>
           <CardTitle className="text-xl group-hover:text-jimmy-gold transition-colors">
-            {post.title}
+            {post.title || 'Untitled'}
           </CardTitle>
           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-            <div className="flex items-center space-x-1">
-              <User size={14} />
-              <span>{post.author}</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Calendar size={14} />
-              <span>{new Date(post.date).toLocaleDateString('de-DE')}</span>
-            </div>
-            <span>{post.readTime}</span>
+            {post.author && (
+              <div className="flex items-center space-x-1">
+                <User size={14} />
+                <span>{post.author}</span>
+              </div>
+            )}
+            {post.date && (
+              <div className="flex items-center space-x-1">
+                <Calendar size={14} />
+                <span>{new Date(post.date).toLocaleDateString('de-DE')}</span>
+              </div>
+            )}
+            {post.readTime && <span>{post.readTime}</span>}
           </div>
         </CardHeader>
         <CardContent className="flex-grow flex flex-col">
-          <p className="text-muted-foreground mb-4 flex-grow">{post.excerpt}</p>
+          {post.excerpt && (
+            <p className="text-muted-foreground mb-4 flex-grow">{post.excerpt}</p>
+          )}
           <Button 
             variant="ghost" 
             className="p-0 h-auto text-jimmy-gold hover:text-jimmy-gold/80 group self-start" 
