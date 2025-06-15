@@ -24,8 +24,8 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Das innovative Portal, das den Bewerbungsprozess umdreht. 
-              Unternehmen bewerben sich bei talentierten Schülern.
+              So einfach Bewerben wie noch nie!
+              So einfach war HR noch nie!
             </p>
             <div className="text-sm">
               <div className="flex flex-col xl:flex-row xl:items-center xl:space-x-8 space-y-2 xl:space-y-0 text-foreground dark:text-white">
