@@ -130,28 +130,20 @@ const FAQUnternehmen = () => {
                   </CardTitle>
                   <p className="text-muted-foreground">
                     Unser Team steht Ihnen für eine kostenlose Beratung zur Verfügung. 
-                    Gerne erklären wir Ihnen in einem persönlichen Gespräch, wie Jimmy 
+                    Gerne erklären wir Ihnen, wie Jimmy 
                     Ihnen bei der Suche nach den besten Auszubildenden helfen kann.
                   </p>
                 </CardHeader>
                 <CardContent className="grid md:grid-cols-2 gap-8">
                   <div className="text-center">
                     <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">E-Mail Beratung</h3>
-                    <p className="text-muted-foreground mb-4">unternehmen@jimmy-portal.de</p>
-                    <Button className="bg-gradient-to-r from-jimmy-gold to-yellow-400 text-jimmy-header">
-                      Kostenlose Beratung anfragen
-                    </Button>
-                  </div>
-                  <div className="text-center">
-                    <Phone className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Telefon Beratung</h3>
-                    <p className="text-muted-foreground mb-2">+49 (0) 123 456789</p>
-                    <p className="text-sm text-muted-foreground mb-4">Mo-Fr: 8:00 - 18:00 Uhr</p>
+                    <h3 className="font-semibold mb-2">E-Mail Support</h3>
+                    <p className="text-muted-foreground mb-4">kontakt@jimmy-ausbildung.de</p>
                     <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
-                      Rückruf vereinbaren
+                      E-Mail schreiben
                     </Button>
                   </div>
+                
                 </CardContent>
               </Card>
             </motion.div>
