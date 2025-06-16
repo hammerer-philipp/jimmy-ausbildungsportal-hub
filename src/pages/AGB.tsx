@@ -1,3 +1,4 @@
+
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,73 +9,60 @@ const AGB = () => {
   const sections = [
     {
       icon: FileText,
-      title: "§ 1 Geltungsbereich",
+      title: "1. Geltungsbereich und Vertragsgegenstand",
       content: [
-        "(1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen der Jimmy UG (haftungsbeschränkt), nachfolgend \"Jimmy\" genannt, die über die Plattform www.jimmy-portal.de erbracht werden.",
-        "(2) Abweichende Bedingungen des Nutzers werden nicht anerkannt, es sei denn, Jimmy stimmt schriftlich zu."
+        "Die Jimmy UG (haftungsbeschränkt) bietet unter der Webseite jimmyausbildung.de (im Folgenden: Jimmy – Das Ausbildungsportal) eine webbasierte Software für die Ausbildungs- und Praktika Vermittlung (im Folgenden: Software) an.",
+        "Die folgenden Allgemeinen Geschäftsbedingungen gelten für alle Verträge, die zwischen der Jimmy UG (haftungsbeschränkt) und Kunden (z. B. Unternehmen und Privatpersonen) Zustandekommen."
       ]
     },
     {
       icon: Users,
-      title: "§ 2 Leistungen von Jimmy",
+      title: "2. Vertragsschluss",
       content: [
-        "(1) Jimmy betreibt eine Online-Plattform zur Vermittlung zwischen Schülern und Unternehmen für Ausbildungsplätze.",
-        "(2) Für Schüler ist die Nutzung der Plattform kostenlos. Unternehmen zahlen eine jährliche Gebühr von 600€ für den Zugang zur Plattform.",
-        "(3) Jimmy vermittelt lediglich Kontakte und garantiert nicht den Erfolg einer Bewerbung oder das Zustandekommen eines Ausbildungsvertrages."
-      ]
-    },
-    {
-      icon: Building2,
-      title: "§ 3 Registrierung und Nutzerkonto",
-      content: [
-        "(1) Die Nutzung der Plattform erfordert eine Registrierung. Der Nutzer verpflichtet sich, wahrheitsgemäße Angaben zu machen.",
-        "(2) Jeder Nutzer darf nur ein Konto erstellen. Das Konto ist nicht übertragbar.",
-        "(3) Der Nutzer ist für die Geheimhaltung seiner Zugangsdaten verantwortlich."
-      ]
-    },
-    {
-      icon: Shield,
-      title: "§ 4 Pflichten der Nutzer",
-      content: [
-        "(1) Nutzer verpflichten sich, keine rechtswidrigen, beleidigenden oder diskriminierenden Inhalte zu veröffentlichen.",
-        "(2) Die Weitergabe von Kontaktdaten außerhalb der Plattform zu Beginn einer Geschäftsbeziehung ist erlaubt und erwünscht.",
-        "(3) Unternehmen verpflichten sich, nur echte Ausbildungsplätze anzubieten und seriös mit Bewerbern umzugehen."
+        "(2.1) Testphase: Auf Anfrage stellt die Jimmy UG den Unternehmen einen Testzugang zur Verfügung. Sobald der Zugriff eingerichtet wurde, beginnt die kostenlose Testphase. Während der Testphase kann die Software uneingeschränkt genutzt werden.",
+        "Es besteht kein Anspruch des Unternehmens auf eine kostenlose Testphase. Die Jimmy UG (haftungsbeschränkt) kann diese ohne Begründung verweigern. Insbesondere ist nach Abschluss der Testphase eine zweite Testphase ausgeschlossen.",
+        "(2.2) Übergang zur kostenpflichtigen Nutzung: Der Testzugang geht nicht automatisch in einen kostenpflichtigen Zugang über. Ein Vertrag über die weitere Nutzung kommt zustande, indem der Kunde in der Weboberfläche oder auf einem anderen Kanal eine Buchung durchführt."
       ]
     },
     {
       icon: CreditCard,
-      title: "§ 5 Zahlungsbedingungen (Unternehmen)",
+      title: "3. Abrechnung",
       content: [
-        "(1) Unternehmen zahlen eine jährliche Gebühr von 600€ (inkl. gesetzlicher MwSt.).",
-        "(2) Die Zahlung erfolgt im Voraus für ein Jahr. Die Rechnung wird zu Beginn der Laufzeit gestellt.",
-        "(3) Bei Zahlungsverzug kann Jimmy den Zugang zur Plattform sperren."
+        "(3.1) Die Jimmy UG (haftungsbeschränkt) berechnet die Nutzung ihrer Software pro Anfrage. Die aktuellen Preise sind auf der Webseite von Jimmy – Das Ausbildungsportal zu finden. Jede Anfrage wird direkt nach deren Bestätigung abgerechnet und der entsprechende Betrag sofort vom hinterlegten Zahlungsmittel eingezogen.",
+        "(3.2) Vertragslaufzeit: Der Vertrag im Rahmen des Pauschalmodells hat eine Mindestlaufzeit von 12 Monaten und verlängert sich nach Ablauf dieser Laufzeit automatisch um ein weiteres Jahr, wenn er nicht mit einer Frist von einem Monat zum Ende der Abrechnungsperiode gekündigt wird.",
+        "(3.3) Kündigung: Das Vertragsverhältnis im Pauschalmodell kann vom Kunden nach Ablauf der 12-monatigen Mindestlaufzeit mit einer Frist von einem Monat zum Ende der jeweiligen Abrechnungsperiode gekündigt werden."
       ]
     },
     {
-      icon: Calendar,
-      title: "§ 6 Laufzeit und Kündigung",
+      icon: Building2,
+      title: "4. Rechte und Pflichten des Kunden",
       content: [
-        "(1) Schüler können ihr Konto jederzeit ohne Frist löschen.",
-        "(2) Unternehmensverträge laufen ein Jahr und verlängern sich automatisch, wenn nicht mit 3 Monaten Frist zum Vertragsende gekündigt wird.",
-        "(3) Das Recht zur außerordentlichen Kündigung bleibt unberührt."
+        "(4.1) Nutzungsrecht: Die Jimmy UG (haftungsbeschränkt) räumt dem Kunden das einfache und nicht übertragbare sowie zeitlich begrenzte Recht zur Nutzung der gebuchten Pakete ein.",
+        "(4.2) Sorgfaltspflichten: Der Kunde verpflichtet sich, die Software ausschließlich vertragsgemäß zu nutzen und Dritten nicht zur Nutzung zur Verfügung zu stellen. Er ist dafür verantwortlich, dass keine unbefugten Personen Zugriff auf die Software erhalten."
+      ]
+    },
+    {
+      icon: Shield,
+      title: "5. Gewährleistung",
+      content: [
+        "Bei Sach- und Rechtsmängeln gelten die gesetzlichen Vorschriften, soweit nachfolgend nicht anderes bestimmt ist. Gewährleistungsansprüche verjähren ein Jahr nach Entstehung. Ansprüche des Kunden auf Schadensersatz bzw. Ersatz vergeblicher Aufwendungen bestehen auch bei Mängeln nur nach Maßgabe von Ziffer 6 und sind im Übrigen ausgeschlossen."
       ]
     },
     {
       icon: AlertTriangle,
-      title: "§ 7 Haftung",
+      title: "6. Haftung",
       content: [
-        "(1) Jimmy haftet nur für Schäden, die auf einer vorsätzlichen oder grob fahrlässigen Pflichtverletzung beruhen.",
-        "(2) Die Haftung für mittelbare Schäden und entgangenen Gewinn ist ausgeschlossen.",
-        "(3) Jimmy haftet nicht für das Verhalten der Nutzer untereinander."
+        "Die Jimmy UG (haftungsbeschränkt) haftet nur im Falle von Vorsatz oder grober Fahrlässigkeit. Für einfache Fahrlässigkeit haftet die Jimmy UG (haftungsbeschränkt) nur bei Verletzung einer Pflicht, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf deren Einhaltung der Kunde regelmäßig vertrauen darf (sogenannte Kardinalpflicht).",
+        "Sofern die Jimmy UG (haftungsbeschränkt) für einfache Fahrlässigkeit haftet, ist die Haftung auf den Schaden begrenzt, mit dessen Entstehen nach den bei Vertragsschluss bekannten Umständen typischerweise gerechnet werden musste."
       ]
     },
     {
       icon: Scale,
-      title: "§ 8 Schlussbestimmungen",
+      title: "7. Schlussbestimmungen",
       content: [
-        "(1) Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts.",
-        "(2) Gerichtsstand ist Augsburg, sofern der Nutzer Kaufmann ist.",
-        "(3) Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+        "(7.1) Änderungen der AGB: Die Jimmy UG (haftungsbeschränkt) hat das Recht, die Allgemeinen Geschäftsbedingungen abzuändern, wenn dies durch Gesetzesänderungen, Änderungen der Rechtsprechung, veränderte Marktgegebenheiten oder Änderungen am Produkt bzw. Service notwendig wird.",
+        "(7.2) Textformerfordernis: Nebenabreden, Ergänzungen oder Änderungen dieser Allgemeinen Geschäftsbedingungen bedürfen der Textform.",
+        "(7.3) Rechtsgrundlage: Das zwischen den Parteien bestehende Vertragsverhältnis unterliegt ausschließlich dem Recht der Bundesrepublik Deutschland unter ausdrücklichem Ausschluss des UN-Kaufrechts."
       ]
     }
   ];
@@ -97,7 +85,7 @@ const AGB = () => {
                 Allgemeine <span className="text-jimmy-gold">Geschäftsbedingungen</span>
               </h1>
               <p className="text-xl text-muted-foreground">
-                Gültig ab: 01.01.2024
+                Jimmy UG (haftungsbeschränkt)
               </p>
             </motion.div>
           </div>
@@ -136,50 +124,24 @@ const AGB = () => {
                 </motion.div>
               ))}
 
-              {/* Datenschutz Verweis */}
+              {/* Kontaktadresse */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.9 }}
+                transition={{ delay: 0.8 }}
               >
                 <Card className="border-border/40">
                   <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Shield className="w-6 h-6 text-jimmy-gold mr-3" />
-                      § 8 Datenschutz
-                    </CardTitle>
+                    <CardTitle>7.4 Kontaktadresse</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung, 
-                      die Bestandteil dieser AGB ist.
+                      Der Kunde teilt der Jimmy UG (haftungsbeschränkt) bei der Bestellung bzw. Anmeldung für einen 
+                      Testzugang initial eine Kontakt-E-Mail-Adresse mit. Die Jimmy UG (haftungsbeschränkt) wird ihn, 
+                      insbesondere wenn es diese Allgemeinen Geschäftsbedingungen erfordern, unter dieser E-Mail-Adresse 
+                      kontaktieren.
                     </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* Änderungen */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 1.0 }}
-              >
-                <Card className="border-border/40">
-                  <CardHeader>
-                    <CardTitle>§ 9 Änderungen der AGB</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      <p className="text-sm text-muted-foreground">
-                        (1) Jimmy behält sich vor, diese AGB zu ändern. Änderungen werden den Nutzern per E-Mail mitgeteilt.
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        (2) Widersprüche gegen Änderungen müssen innerhalb von 4 Wochen schriftlich erfolgen. 
-                        Andernfalls gelten die Änderungen als angenommen.
-                      </p>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -189,15 +151,15 @@ const AGB = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 1.1 }}
+                transition={{ delay: 0.9 }}
               >
                 <Card className="border-border/40 bg-muted/30">
                   <CardContent className="p-6 text-center">
                     <h4 className="font-semibold mb-3">Kontakt</h4>
                     <p className="text-sm text-muted-foreground">
                       Bei Fragen zu diesen AGB wenden Sie sich bitte an: 
-                      <a href="mailto:info@jimmy-portal.de" className="text-jimmy-gold hover:text-jimmy-gold/80 ml-1 underline">
-                        info@jimmy-portal.de
+                      <a href="mailto:kontakt@jimmy-ausbildung.de" className="text-jimmy-gold hover:text-jimmy-gold/80 ml-1 underline">
+                        kontakt@jimmy-ausbildung.de
                       </a>
                     </p>
                   </CardContent>

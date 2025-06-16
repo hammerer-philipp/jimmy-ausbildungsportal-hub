@@ -1,8 +1,9 @@
+
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Users, Database, Settings } from 'lucide-react';
+import { Shield, Lock, Eye, Users, Database, Settings, Server, Mail } from 'lucide-react';
 
 const Datenschutz = () => {
   const sections = [
@@ -12,65 +13,81 @@ const Datenschutz = () => {
       content: [
         {
           subtitle: "Allgemeine Hinweise",
-          text: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
+          text: "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung."
         },
         {
           subtitle: "Datenerfassung auf dieser Website",
-          text: "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen."
+          text: "Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen."
+        },
+        {
+          subtitle: "Wie erfassen wir Ihre Daten?",
+          text: "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.\n\nAndere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten."
+        }
+      ]
+    },
+    {
+      icon: Server,
+      title: "2. Hosting",
+      content: [
+        {
+          subtitle: "Strato",
+          text: "Anbieter ist die Strato AG, Otto-Ostrowski-Straße 7, 10249 Berlin (nachfolgend „Strato"). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer IP-Adressen.\n\nWeitere Informationen entnehmen Sie der Datenschutzerklärung von Strato: https://www.strato.de/datenschutz/.\n\nDie Verwendung von Strato erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website."
         }
       ]
     },
     {
       icon: Users,
-      title: "2. Verantwortliche Stelle",
+      title: "3. Allgemeine Hinweise und Pflichtinformationen",
       content: [
         {
-          text: "Jimmy UG (haftungsbeschränkt)\nMusterstraße 123\n86669 Königsmoos\nDeutschland\n\nE-Mail: datenschutz@jimmy-portal.de\nTelefon: +49 (0) 123 456789"
+          subtitle: "Hinweis zur verantwortlichen Stelle",
+          text: "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:\n\nChristina Hammerer\nAdrian-von-Riedl-Str. 34\n86669 Königsmoos\n\nTelefon: +4915157952359\nE-Mail: ch@jimmy-marken.de\n\nVerantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet."
+        },
+        {
+          subtitle: "Speicherdauer",
+          text: "Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben."
         }
       ]
     },
     {
       icon: Database,
-      title: "3. Datenerfassung und -verwendung",
+      title: "4. Datenerfassung auf dieser Website",
       content: [
         {
-          subtitle: "Registrierung und Profilerstellung",
-          text: "Bei der Registrierung auf Jimmy erfassen wir folgende Daten: Name, E-Mail-Adresse, Alter, Schulabschluss, Interessen und weitere freiwillige Angaben. Diese Daten werden zur Bereitstellung unserer Dienstleistung und zur Vermittlung zwischen Schülern und Unternehmen verwendet."
+          subtitle: "Kontaktformular",
+          text: "Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
         },
         {
-          subtitle: "Kontaktaufnahme",
-          text: "Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Daten zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben."
-        },
+          subtitle: "Anfrage per E-Mail, Telefon oder Telefax",
+          text: "Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."
+        }
+      ]
+    },
+    {
+      icon: Mail,
+      title: "5. Newsletter",
+      content: [
         {
-          subtitle: "Newsletter",
-          text: "Für den Newsletter-Versand verwenden wir das Double-Opt-In-Verfahren. Sie erhalten eine Bestätigungs-E-Mail, in der Sie Ihre Anmeldung bestätigen müssen. Der Newsletter kann jederzeit abbestellt werden."
+          subtitle: "Newsletterdaten",
+          text: "Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind und mit dem Empfang des Newsletters einverstanden sind. Weitere Daten werden nicht bzw. nur auf freiwilliger Basis erhoben.\n\nDie Verarbeitung der in das Newsletteranmeldeformular eingegebenen Daten erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die erteilte Einwilligung zur Speicherung der Daten, der E-Mail-Adresse sowie deren Nutzung zum Versand des Newsletters können Sie jederzeit widerrufen."
         }
       ]
     },
     {
       icon: Settings,
-      title: "4. Ihre Rechte",
+      title: "6. Ihre Rechte",
       content: [
         {
           text: "Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
           list: [
-            "Recht auf Auskunft (Art. 15 DSGVO)",
-            "Recht auf Berichtigung (Art. 16 DSGVO)",
-            "Recht auf Löschung (Art. 17 DSGVO)",
-            "Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)",
-            "Recht auf Datenübertragbarkeit (Art. 20 DSGVO)",
-            "Recht auf Widerspruch (Art. 21 DSGVO)",
-            "Recht auf Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)"
+            "Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten",
+            "Recht auf Berichtigung unrichtiger oder unvollständiger Daten",
+            "Recht auf Löschung Ihrer gespeicherten Daten",
+            "Recht auf Einschränkung der Datenverarbeitung",
+            "Recht auf Datenübertragbarkeit",
+            "Recht auf Widerspruch gegen die Verarbeitung",
+            "Recht auf Widerruf erteilter Einwilligungen"
           ]
-        }
-      ]
-    },
-    {
-      icon: Lock,
-      title: "5. Datensicherheit",
-      content: [
-        {
-          text: "Wir verwenden moderne Verschlüsselungstechnologien und Sicherheitsmaßnahmen, um Ihre Daten zu schützen. Die Übertragung erfolgt über SSL/TLS-Verschlüsselung. Unsere Server befinden sich in Deutschland und unterliegen strengen Datenschutzbestimmungen."
         }
       ]
     }
@@ -143,7 +160,7 @@ const Datenschutz = () => {
                 </motion.div>
               ))}
 
-              {/* Additional Sections */}
+              {/* SSL Verschlüsselung */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -152,32 +169,18 @@ const Datenschutz = () => {
               >
                 <Card className="border-border/40">
                   <CardHeader>
-                    <CardTitle>6. Cookies und Tracking</CardTitle>
+                    <CardTitle className="flex items-center">
+                      <Lock className="w-6 h-6 text-jimmy-gold mr-3" />
+                      SSL- bzw. TLS-Verschlüsselung
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      Unsere Website verwendet technisch notwendige Cookies zur Funktionalität. Wir setzen keine 
-                      Tracking-Cookies oder Analysedienste ohne Ihre ausdrückliche Einwilligung ein.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.7 }}
-              >
-                <Card className="border-border/40">
-                  <CardHeader>
-                    <CardTitle>7. Datenlöschung und Speicherdauer</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Ihre Daten werden nur so lange gespeichert, wie es für die Zweckerfüllung erforderlich ist oder 
-                      gesetzliche Aufbewahrungsfristen bestehen. Schülerprofile werden nach 2 Jahren Inaktivität gelöscht, 
-                      Unternehmensdaten nach Vertragsende.
+                      Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, 
+                      wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine 
+                      SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die 
+                      Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in 
+                      Ihrer Browserzeile.
                     </p>
                   </CardContent>
                 </Card>
@@ -188,15 +191,14 @@ const Datenschutz = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.8 }}
+                transition={{ delay: 0.7 }}
               >
                 <Card className="border-border/40 bg-muted/30">
                   <CardContent className="p-6 text-center">
-                    <h4 className="font-semibold mb-3">Kontakt bei Datenschutzfragen</h4>
+                    <h4 className="font-semibold mb-3">Quelle</h4>
                     <p className="text-sm text-muted-foreground">
-                      Bei Fragen zum Datenschutz wenden Sie sich bitte an: 
-                      <a href="mailto:datenschutz@jimmy-portal.de" className="text-jimmy-gold hover:text-jimmy-gold/80 ml-1 underline">
-                        datenschutz@jimmy-portal.de
+                      <a href="https://www.e-recht24.de" className="text-jimmy-gold hover:text-jimmy-gold/80 underline">
+                        https://www.e-recht24.de
                       </a>
                     </p>
                   </CardContent>

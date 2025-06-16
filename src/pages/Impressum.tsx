@@ -1,3 +1,4 @@
+
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -53,7 +54,7 @@ const Impressum = () => {
                       <div className="flex items-start space-x-2">
                         <MapPin className="w-4 h-4 text-jimmy-gold mt-1 flex-shrink-0" />
                         <div>
-                          <p>Musterstraße 123</p>
+                          <p>Adrian-von-Riedel-str. 34</p>
                           <p>86669 Königsmoos</p>
                           <p>Deutschland</p>
                         </div>
@@ -81,11 +82,11 @@ const Impressum = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="flex items-center space-x-2">
                         <Phone className="w-4 h-4 text-jimmy-gold" />
-                        <span>+49 (0) 123 456789</span>
+                        <span>+4915157952359</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Mail className="w-4 h-4 text-jimmy-gold" />
-                        <span>info@jimmy-portal.de</span>
+                        <span>kontakt@jimmy-ausbildung.de</span>
                       </div>
                     </div>
                   </CardContent>
@@ -106,9 +107,8 @@ const Impressum = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <p><strong>Registergericht:</strong> Amtsgericht Augsburg</p>
-                        <p><strong>Registernummer:</strong> HRB 12345</p>
-                        <p><strong>Umsatzsteuer-ID:</strong> DE123456789</p>
+                        <p><strong>Handelsregister:</strong> HRB 11954</p>
+                        <p><strong>Registergericht:</strong> Amtsgericht Ingolstadt - Registergericht</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -122,19 +122,18 @@ const Impressum = () => {
                 >
                   <Card className="border-border/40 h-full">
                     <CardHeader>
-                      <CardTitle>Geschäftsführung</CardTitle>
+                      <CardTitle>Vertreten durch</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-2">
-                        <p>Max Mustermann</p>
-                        <p>Anna Beispiel</p>
+                        <p>Christina Hammerer</p>
                       </div>
                     </CardContent>
                   </Card>
                 </motion.div>
               </div>
 
-              {/* Haftungsausschluss */}
+              {/* Redaktionell verantwortlich */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -143,59 +142,62 @@ const Impressum = () => {
               >
                 <Card className="border-border/40">
                   <CardHeader>
-                    <CardTitle>Haftungsausschluss</CardTitle>
+                    <CardTitle>Redaktionell verantwortlich</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div>
-                      <h4 className="font-semibold mb-2">Haftung für Inhalte</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den 
-                        allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht 
-                        unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach 
-                        Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold mb-2">Haftung für Links</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
-                        Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten 
-                        Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold mb-2">Urheberrecht</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen 
-                        Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der 
-                        Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                      </p>
+                  <CardContent>
+                    <div className="space-y-2">
+                      <p>Christina Hammerer</p>
+                      <p>Adrian-von-Riedl-Str. 34</p>
+                      <p>86669 Königsmoos</p>
                     </div>
                   </CardContent>
                 </Card>
               </motion.div>
 
-              {/* Online-Streitbeilegung */}
+              {/* EU-Streitschlichtung */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
               >
-                <Card className="border-border/40 bg-muted/30">
-                  <CardContent className="p-6">
-                    <h4 className="font-semibold mb-3">Online-Streitbeilegung (OS)</h4>
-                    <p className="text-sm text-muted-foreground">
+                <Card className="border-border/40">
+                  <CardHeader>
+                    <CardTitle>EU-Streitschlichtung</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground mb-2">
                       Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
                       <a href="https://ec.europa.eu/consumers/odr/" className="text-jimmy-gold hover:text-jimmy-gold/80 ml-1 underline">
                         https://ec.europa.eu/consumers/odr/
                       </a>
                     </p>
-                    <p className="text-sm text-muted-foreground mt-2">
+                    <p className="text-sm text-muted-foreground">
+                      Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* Verbraucherstreitbeilegung */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+              >
+                <Card className="border-border/40 bg-muted/30">
+                  <CardContent className="p-6">
+                    <h4 className="font-semibold mb-3">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h4>
+                    <p className="text-sm text-muted-foreground">
                       Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer 
                       Verbraucherschlichtungsstelle teilzunehmen.
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      <strong>Quelle:</strong> 
+                      <a href="https://www.e-recht24.de/impressum-generator.html" className="text-jimmy-gold hover:text-jimmy-gold/80 ml-1 underline">
+                        https://www.e-recht24.de/impressum-generator.html
+                      </a>
                     </p>
                   </CardContent>
                 </Card>
