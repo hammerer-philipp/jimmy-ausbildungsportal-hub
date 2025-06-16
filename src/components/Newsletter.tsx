@@ -1,4 +1,5 @@
 
+
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -50,7 +51,7 @@ const Newsletter = () => {
       if (data.success) {
         toast({
           title: "Erfolgreich angemeldet!",
-          description: "Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+          description: data.message,
         });
         setEmail('');
       } else {
@@ -94,3 +95,4 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
