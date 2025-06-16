@@ -8,59 +8,59 @@ import { Mail, Phone, Building2 } from 'lucide-react';
 
 const FAQUnternehmen = () => {
   const faqItems = [
-    {
-      question: "Wie funktioniert Jimmy für Unternehmen?",
-      answer: "Als Unternehmen erstellen Sie ein Profil und definieren Ihre Ausbildungsplätze. Sie können dann in unserer Schülerdatenbank nach passenden Kandidaten suchen und sich bei ihnen bewerben. Die Schüler entscheiden, ob sie Interesse an Ihrem Angebot haben."
-    },
-    {
-      question: "Was kostet Jimmy für Unternehmen?",
-      answer: "Jimmy kostet für Unternehmen 600€ pro Jahr. Dafür erhalten Sie Zugang zu unserer gesamten Schülerdatenbank und können unbegrenzt Bewerbungen an passende Kandidaten senden."
-    },
-    {
-      question: "Wie unterscheidet sich Jimmy vom traditionellen Bewerbungsprozess?",
-      answer: "Bei Jimmy dreht sich der Bewerbungsprozess um: Anstatt dass sich Schüler bei Ihnen bewerben, bewerben Sie sich bei den Schülern. Das macht Sie als Arbeitgeber proaktiver und hilft Ihnen, auch passive Kandidaten zu erreichen."
-    },
-    {
-      question: "Welche Informationen erhalte ich über die Schüler?",
-      answer: "Sie sehen detaillierte Profile mit Informationen über Schulabschluss, Interessen, Stärken, absolvierte Praktika und Berufswünsche. Nach einer erfolgreichen Kontaktaufnahme erhalten Sie auch die Kontaktdaten."
-    },
-    {
-      question: "Gibt es eine Mindestvertragslaufzeit?",
-      answer: "Unser Standardvertrag läuft ein Jahr. Eine Kündigung ist mit einer Frist von 3 Monaten zum Vertragsende möglich. So haben Sie ausreichend Zeit, die Plattform vollständig zu nutzen."
-    },
-    {
-      question: "Wie viele Bewerbungen kann ich pro Jahr senden?",
-      answer: "Es gibt keine Begrenzung bei der Anzahl der Bewerbungen, die Sie senden können. Sie zahlen einen festen Jahresbeitrag und können unbegrenzt mit passenden Schülern in Kontakt treten."
-    },
-    {
-      question: "Kann ich mehrere Ausbildungsberufe gleichzeitig anbieten?",
-      answer: "Ja, Sie können beliebig viele verschiedene Ausbildungsberufe in Ihrem Unternehmensprofil hinterlegen und entsprechend nach Schülern mit passenden Interessen suchen."
-    },
-    {
-      question: "Wie erfolgreich ist Jimmy bei der Vermittlung?",
-      answer: "Unsere bisherigen Partnernunternehmen berichten von einer deutlich höheren Erfolgsquote als bei herkömmlichen Bewerbungsverfahren, da sie gezielt auf interessierte und passende Kandidaten zugehen können."
-    },
-    {
-      question: "Gibt es Unterstützung bei der Nutzung der Plattform?",
-      answer: "Ja, wir bieten eine ausführliche Einführung in die Plattform sowie fortlaufenden Support. Unser Team steht Ihnen bei Fragen zur Verfügung und hilft bei der Optimierung Ihrer Suche."
-    },
-    {
-      question: "Kann ich mein Unternehmensprofil selbst verwalten?",
-      answer: "Selbstverständlich! Sie haben vollen Zugriff auf Ihr Profil und können jederzeit Informationen zu Ihrem Unternehmen, verfügbaren Ausbildungsplätzen oder Anforderungen aktualisieren."
-    },
-    {
-      question: "Wie schnell kann ich mit der Nutzung beginnen?",
-      answer: "Nach der Registrierung und Zahlung können Sie sofort mit der Nutzung beginnen. Die Einrichtung Ihres Unternehmensprofils dauert etwa 30 Minuten."
-    },
-    {
-      question: "Gibt es eine Erfolgsgarantie?",
-      answer: "Während wir keine Erfolgsgarantie geben können, bieten wir Ihnen nach den ersten 3 Monaten ein ausführliches Beratungsgespräch an, um Ihre Strategie zu optimieren und den Erfolg zu steigern."
-    },
-    {
-      question: "Kann ich auch Praktikumsplätze über Jimmy anbieten?",
-      answer: "Ja, Sie können auch Praktikumsplätze über Jimmy anbieten. Viele Schüler suchen gezielt nach Praktikumsmöglichkeiten, um verschiedene Berufe kennenzulernen."
-    }
-  ];
+  {
+    question: "Wie funktioniert Jimmy für Unternehmen?",
+    answer: "Unternehmen erstellen ein Profil und legen ihre Ausbildungs- und/oder Praktikumsplätze an. Anschließend durchsuchen sie die Schülerdatenbank und senden gezielte Anfragen an passende Kandidaten. Die Schüler entscheiden, ob sie Interesse haben – es handelt sich also um einen umgedrehten Bewerbungsprozess."
+  },
+  {
+    question: "Was kostet Jimmy für Unternehmen?",
+    answer: "Jimmy funktioniert über ein Abonnement-Modell. Das Jahresabo kostet 600 € und erlaubt unbegrenzten Zugriff auf die Plattform, inklusive aller Funktionen und Kontaktanfragen an Schüler."
+  },
+  {
+    question: "Wie unterscheidet sich Jimmy vom traditionellen Bewerbungsprozess?",
+    answer: "Bei Jimmy bewerben sich nicht die Schüler, sondern Sie als Unternehmen. So können Sie aktiv passende Kandidaten ansprechen – auch solche, die sich sonst nicht bewerben würden."
+  },
+  {
+    question: "Welche Informationen erhalte ich über die Schüler?",
+    answer: "Sie sehen anonymisierte Profile mit Informationen zu Schulform, Interessen, Stärken, Berufswünschen und ggf. Praktikumserfahrungen. Nach Annahme Ihrer Anfrage erhalten Sie die Kontaktdaten des Schülers."
+  },
+  {
+    question: "Gibt es eine Mindestvertragslaufzeit?",
+    answer: "Ja, das Jahresabo läuft für 12 Monate. Die Kündigungsfrist beträgt 3 Monate vor Ablauf der Laufzeit."
+  },
+  {
+    question: "Wie viele Bewerbungen kann ich pro Jahr senden?",
+    answer: "Unbegrenzt. Im Abo sind alle Kontaktaufnahmen enthalten – es gibt kein Limit für Anfragen an Schüler."
+  },
+  {
+    question: "Kann ich mehrere Ausbildungsberufe gleichzeitig anbieten?",
+    answer: "Ja, Sie können beliebig viele Ausbildungs- und Praktikumsangebote gleichzeitig hinterlegen und individuell passende Schüler dafür anfragen."
+  },
+  {
+    question: "Wie erfolgreich ist Jimmy bei der Vermittlung?",
+    answer: "Unsere bisherigen Partner berichten von einer deutlich besseren Vermittlungsquote im Vergleich zu klassischen Verfahren – vor allem, weil sie aktiv passende Kandidaten auswählen und ansprechen können."
+  },
+  {
+    question: "Gibt es Unterstützung bei der Nutzung der Plattform?",
+    answer: "Ja, wir bieten eine persönliche Einführung, eine Support-Datenbank und direkten Support per E-Mail oder Telefon. Unser Ziel ist, dass Sie schnell und erfolgreich starten."
+  },
+  {
+    question: "Kann ich mein Unternehmensprofil selbst verwalten?",
+    answer: "Ja, Sie können Ihr Profil jederzeit selbst verwalten – dazu zählen Ausbildungsplätze, Ansprechpartner, Standorte und Suchkriterien."
+  },
+  {
+    question: "Wie schnell kann ich mit der Nutzung beginnen?",
+    answer: "Sobald Sie sich registriert und das Abo abgeschlossen haben, können Sie direkt starten. Die Profilerstellung dauert in der Regel unter 30 Minuten."
+  },
+  {
+    question: "Gibt es eine Erfolgsgarantie?",
+    answer: "Eine Garantie können wir nicht geben. Aber: Nach den ersten 3 Monaten bieten wir Ihnen ein kostenloses Beratungsgespräch zur Optimierung Ihrer Suche und Ansprache an."
+  },
+  {
+    question: "Kann ich auch Praktikumsplätze über Jimmy anbieten?",
+    answer: "Ja, viele Schüler suchen gezielt nach Praktikumsplätzen. Sie können in Ihrem Profil Praktikumsangebote anlegen und gezielt Schüler dafür kontaktieren."
+  }
+];
 
   return (
     <div className="min-h-screen bg-background">
