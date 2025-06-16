@@ -138,12 +138,7 @@ const faqItems = [
                       E-Mail schreiben
                     </Button>
                   </div>
-                  <div className="text-center">
-                    <Phone className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
-                    <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
-                      Anrufen
-                    </Button>
-                  </div>
+
                 </CardContent>
               </Card>
             </motion.div>
