@@ -20,7 +20,7 @@ export const ModernHeader = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <img src="/lovable-uploads/ae06c914-e73d-4227-abd6-5446944d168a.png" alt="Jimmy Ausbildung Logo" className="w-8 h-8 rounded-lg" />
+            <img src="/icon/jimmyHead.svg" alt="Jimmy Ausbildung Logo" className="w-8 h-8 rounded-lg" />
             <Link to="/" className="text-xl font-bold bg-gradient-to-r from-jimmy-gold to-yellow-400 bg-clip-text text-transparent">
               Jimmy Ausbildung
             </Link>
