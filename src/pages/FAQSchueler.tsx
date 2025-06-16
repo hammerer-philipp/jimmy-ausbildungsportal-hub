@@ -135,9 +135,11 @@ const faqItems = [
                     <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">E-Mail Support</h3>
                     <p className="text-muted-foreground mb-4">kontakt@jimmy-ausbildung.de</p>
+                    <a href="mailto:kontakt@jimmy-ausbildung.de">
                     <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
                       E-Mail schreiben
                     </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
