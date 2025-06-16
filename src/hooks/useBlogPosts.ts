@@ -42,7 +42,7 @@ export const useBlogPosts = () => {
     const fetchBlogPosts = async () => {
       try {
         console.log('Attempting to fetch from API...');
-        const response = await fetch('https://jimmy-marken.de/api.php');
+        const response = await fetch('https://jimmy-ausbildung.de/api/api.php');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -58,7 +58,7 @@ export const useBlogPosts = () => {
           ...(post.excerpt && { excerpt: post.excerpt }),
           ...(post.author && { author: post.author }),
           ...(post.date && { date: post.date }),
-          ...(post.image_url && { image: `https://jimmy-marken.de/blog/${post.image_url}` }),
+          ...(post.image_url && { image: `https://jimmy-ausbildung.de/blog/${post.image_url}` }),
           ...(post.read_time && { readTime: post.read_time }),
           ...(post.content && { content: post.content })
         }));
