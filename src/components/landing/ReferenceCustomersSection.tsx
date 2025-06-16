@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 const customers = [
   {
     href: "https://verbund.edeka/s%C3%BCdbayern/",
-    src: "/lovable-uploads/63fe33d0-1052-4714-90aa-958eff0ef9a4.png",
+    src: "/icon/edeka_sud.png",
     alt: "EDEKA Südbayern",
   },
   {
     href: "https://www.backstube-wuensche.de/",
-    src: "/lovable-uploads/f2cccf4d-e8d4-47ff-ba83-31d34341aaf7.png",
+    src: "/icon/wunsche.png",
     alt: "Backstube Wünsche",
   },
   {
     href: "https://www.suedbayerische-fleischwaren.de/",
-    src: "/lovable-uploads/e36d7e0c-57ba-4d6e-af35-4ef31acf2edc.png",
+    src: "/icon/subayerische.png",
     alt: "Südbayerische Fleischwaren",
   },
   {
     href: "https://www.goldmilch.de/",
-    src: "/lovable-uploads/067ea29c-252c-4eb3-85dc-ad0c53f16893.png",
+    src: "/icon/goldmilch.png",
     alt: "Goldmilch",
   },
 ];
