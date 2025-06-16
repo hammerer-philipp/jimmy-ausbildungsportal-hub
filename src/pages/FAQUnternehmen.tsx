@@ -134,7 +134,7 @@ const FAQUnternehmen = () => {
                     Ihnen bei der Suche nach den besten Auszubildenden helfen kann.
                   </p>
                 </CardHeader>
-                <CardContent className="grid md:grid-cols-2 gap-8">
+                <CardContent className="flex justify-center">
                   <div className="text-center">
                     <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">E-Mail Support</h3>
@@ -143,7 +143,6 @@ const FAQUnternehmen = () => {
                       E-Mail schreiben
                     </Button>
                   </div>
-                
                 </CardContent>
               </Card>
             </motion.div>
