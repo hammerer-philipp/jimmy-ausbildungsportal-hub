@@ -22,7 +22,7 @@ const FAQUnternehmen = () => {
   },
   {
     question: "Welche Informationen erhalte ich über die Schüler?",
-    answer: "Sie sehen anonymisierte Profile mit Informationen zu Schulform, Interessen, Stärken, Berufswünschen und ggf. Praktikumserfahrungen. Nach Annahme Ihrer Anfrage erhalten Sie die Kontaktdaten des Schülers."
+    answer: "Sie sehen anonymisierte Profile mit Informationen zu Schulform, Interessen, Stärken, Berufswünschen und ggf. Praktikumserfahrungen. Die Kontaktaufnahme erfolgt über das Portal selbst."
   },
   {
     question: "Gibt es eine Mindestvertragslaufzeit?",
@@ -37,28 +37,24 @@ const FAQUnternehmen = () => {
     answer: "Ja, Sie können beliebig viele Ausbildungs- und Praktikumsangebote gleichzeitig hinterlegen und individuell passende Schüler dafür anfragen."
   },
   {
-    question: "Wie erfolgreich ist Jimmy bei der Vermittlung?",
-    answer: "Unsere bisherigen Partner berichten von einer deutlich besseren Vermittlungsquote im Vergleich zu klassischen Verfahren – vor allem, weil sie aktiv passende Kandidaten auswählen und ansprechen können."
-  },
-  {
     question: "Gibt es Unterstützung bei der Nutzung der Plattform?",
-    answer: "Ja, wir bieten eine persönliche Einführung, eine Support-Datenbank und direkten Support per E-Mail oder Telefon. Unser Ziel ist, dass Sie schnell und erfolgreich starten."
+    answer: "Ja, wir bieten eine persönliche Einführung, eine Support-Datenbank und direkten Support per E-Mail. Unser Ziel ist, dass Sie schnell und erfolgreich starten."
   },
   {
     question: "Kann ich mein Unternehmensprofil selbst verwalten?",
-    answer: "Ja, Sie können Ihr Profil jederzeit selbst verwalten – dazu zählen Ausbildungsplätze, Ansprechpartner, Standorte und Suchkriterien."
+    answer: "Ja, Sie können Ihr Profil jederzeit selbst verwalten."
   },
   {
     question: "Wie schnell kann ich mit der Nutzung beginnen?",
-    answer: "Sobald Sie sich registriert und das Abo abgeschlossen haben, können Sie direkt starten. Die Profilerstellung dauert in der Regel unter 30 Minuten."
+    answer: "Sobald Sie sich registriert und das Abo abgeschlossen haben, können Sie direkt starten."
   },
   {
     question: "Gibt es eine Erfolgsgarantie?",
-    answer: "Eine Garantie können wir nicht geben. Aber: Nach den ersten 3 Monaten bieten wir Ihnen ein kostenloses Beratungsgespräch zur Optimierung Ihrer Suche und Ansprache an."
+    answer: "Eine Garantie können wir leider nicht geben."
   },
   {
     question: "Kann ich auch Praktikumsplätze über Jimmy anbieten?",
-    answer: "Ja, viele Schüler suchen gezielt nach Praktikumsplätzen. Sie können in Ihrem Profil Praktikumsangebote anlegen und gezielt Schüler dafür kontaktieren."
+    answer: "Ja Sie können in Ihrem Profil Praktikumsangebote anlegen und gezielt Schüler dafür kontaktieren."
   }
 ];
 
