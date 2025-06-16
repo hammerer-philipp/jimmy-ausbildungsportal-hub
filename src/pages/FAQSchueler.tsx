@@ -7,56 +7,56 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, HelpCircle } from 'lucide-react';
 
 const FAQSchueler = () => {
-  const faqItems = [
-    {
-      question: "Wie funktioniert Jimmy für Schüler?",
-      answer: "Bei Jimmy erstellst du ein Profil mit deinen Stärken, Interessen und Qualifikationen. Unternehmen durchsuchen dann unsere Datenbank und bewerben sich bei dir für ihre Ausbildungsplätze. Du wählst aus den eingegangenen Bewerbungen die interessantesten aus."
-    },
-    {
-      question: "Ist Jimmy wirklich kostenlos für Schüler?",
-      answer: "Ja, absolut! Für Schüler ist Jimmy komplett kostenlos. Du kannst dein Profil erstellen, Bewerbungen von Unternehmen erhalten und den gesamten Service nutzen, ohne einen Cent zu bezahlen."
-    },
-    {
-      question: "Welche Informationen muss ich in mein Profil eingeben?",
-      answer: "Du gibst grundlegende Informationen wie Name, Alter, Schulabschluss, Interessen und Stärken ein. Optional kannst du auch Hobbys, besondere Fähigkeiten oder bereits absolvierte Praktika hinzufügen. Je vollständiger dein Profil, desto bessere Matches erhältst du."
-    },
-    {
-      question: "Wie schnell erhalte ich Bewerbungen von Unternehmen?",
-      answer: "Das hängt von deinem Profil und den aktuell verfügbaren Ausbildungsplätzen ab. Erfahrungsgemäß erhalten aktive Profile innerhalb der ersten Woche erste Bewerbungen von Unternehmen."
-    },
-    {
-      question: "Kann ich auch nach spezifischen Ausbildungsberufen suchen?",
-      answer: "Ja! Du kannst in deinem Profil angeben, welche Ausbildungsberufe dich interessieren. Unternehmen, die genau diese Ausbildungsplätze anbieten, werden dann gezielt auf dich aufmerksam."
-    },
-    {
-      question: "Was passiert, wenn mir eine Bewerbung gefällt?",
-      answer: "Wenn dir eine Unternehmensbewerbung gefällt, kannst du den Kontakt annehmen. Danach erhältst du alle Kontaktdaten und kannst direkt mit dem Unternehmen in Verbindung treten, um weitere Details zu besprechen oder ein Vorstellungsgespräch zu vereinbaren."
-    },
-    {
-      question: "Kann ich mein Profil jederzeit ändern?",
-      answer: "Selbstverständlich! Du kannst dein Profil jederzeit aktualisieren, neue Qualifikationen hinzufügen oder deine Interessen anpassen. Je aktueller dein Profil ist, desto besser sind die Matches."
-    },
-    {
-      question: "Wie schützt Jimmy meine Daten?",
-      answer: "Datenschutz ist uns sehr wichtig. Deine Daten werden nach den neuesten DSGVO-Standards gesichert und nur an Unternehmen weitergegeben, denen du explizit zugestimmt hast. Du behältst jederzeit die Kontrolle über deine Informationen."
-    },
-    {
-      question: "Gibt es eine Mindestaltersgrenze?",
-      answer: "Du musst mindestens 15 Jahre alt sein, um dich bei Jimmy zu registrieren. Wenn du unter 18 bist, benötigst du die Zustimmung deiner Erziehungsberechtigten."
-    },
-    {
-      question: "Kann ich auch mehrere Ausbildungsrichtungen angeben?",
-      answer: "Ja, du kannst durchaus mehrere Ausbildungsbereiche angeben, die dich interessieren. Das erhöht deine Chancen auf passende Bewerbungen von verschiedenen Unternehmen."
-    },
-    {
-      question: "Was ist, wenn ich bereits einen Ausbildungsplatz gefunden habe?",
-      answer: "Glückwunsch! Du kannst dein Profil einfach auf 'inaktiv' setzen oder löschen. So erhältst du keine weiteren Bewerbungen von Unternehmen."
-    },
-    {
-      question: "Bietet Jimmy auch Hilfe bei der Bewerbung?",
-      answer: "Ja, wir bieten dir Tipps für ein überzeugendes Profil und Unterstützung beim Bewerbungsprozess. Zusätzlich findest du in unserem Blog hilfreiche Artikel rund um das Thema Ausbildung."
-    }
-  ];
+const faqItems = [
+  {
+    question: "Wie funktioniert Jimmy für Schüler?",
+    answer: "Als Schüler brauchst du kein eigenes Profil anzulegen. Du absolvierst lediglich ein kurzes Online-Interview. Dieses wird gespeichert und anonymisiert Unternehmen zur Verfügung gestellt. Die Unternehmen melden sich bei dir, wenn dein Profil zu ihrer Ausbildung passt – du musst dich also um nichts kümmern."
+  },
+  {
+    question: "Ist Jimmy wirklich kostenlos für Schüler?",
+    answer: "Ja, Jimmy ist für Schüler vollständig kostenlos. Du zahlst nichts für das Interview, den Service oder den Kontakt mit Unternehmen."
+  },
+  {
+    question: "Welche Informationen muss ich in mein Profil eingeben?",
+    answer: "Du gibst keine klassischen Profildaten ein. Stattdessen beantwortest du Fragen in einem digitalen Interview – etwa zu deinen Interessen, Stärken und Berufsvorstellungen. Diese Infos nutzt Jimmy, um dich Unternehmen anonym vorzuschlagen."
+  },
+  {
+    question: "Wie schnell erhalte ich Bewerbungen von Unternehmen?",
+    answer: "Das hängt davon ab, wie gut dein Interview zu den Anforderungen der Unternehmen passt. Viele Schüler erhalten schon nach wenigen Tagen erste Anfragen – bei besonders gefragten Profilen geht es oft noch schneller."
+  },
+  {
+    question: "Kann ich auch nach spezifischen Ausbildungsberufen suchen?",
+    answer: "Nein – bei Jimmy läuft es andersherum: Du wirst gefunden. Unternehmen sehen, ob dein Interview zu ihrem Ausbildungsangebot passt, und melden sich bei dir. Das macht den Prozess für dich stressfrei und einfach."
+  },
+  {
+    question: "Was passiert, wenn mir eine Bewerbung gefällt?",
+    answer: "Wenn dir ein Unternehmen gefällt, kannst du den Kontakt aktiv freigeben. Danach bekommst du dessen Kontaktdaten und kannst direkt in die Bewerbung oder ein Kennenlerngespräch einsteigen."
+  },
+  {
+    question: "Kann ich mein Interview später nochmal machen?",
+    answer: "Ja, wenn sich etwas an deinen Interessen oder Zielen geändert hat, kannst du ein neues Interview machen. So bleibst du immer aktuell und erhältst bessere Angebote."
+  },
+  {
+    question: "Wie schützt Jimmy meine Daten?",
+    answer: "Jimmy schützt deine Daten nach aktuellen DSGVO-Standards. Unternehmen sehen deine Informationen nur anonymisiert – bis du dich aktiv für den Kontakt entscheidest. Du bestimmst also, wer was über dich erfährt."
+  },
+  {
+    question: "Gibt es eine Mindestaltersgrenze?",
+    answer: "Ja, du solltest mindestens 15 Jahre alt sein, um das Interview absolvieren zu können. Wenn du unter 18 bist, brauchst du die Zustimmung deiner Eltern."
+  },
+  {
+    question: "Kann ich mehrere Ausbildungsrichtungen angeben?",
+    answer: "Ja, im Interview kannst du mehrere Interessenbereiche nennen. So wirst du für unterschiedliche Berufe vorgeschlagen – zum Beispiel im Handwerk, im Büro oder in sozialen Berufen."
+  },
+  {
+    question: "Was ist, wenn ich bereits einen Ausbildungsplatz gefunden habe?",
+    answer: "Dann freuen wir uns für dich! Dein Interview bleibt zwar im System, wird aber automatisch als 'nicht verfügbar' markiert. Du bekommst dann keine neuen Anfragen mehr."
+  },
+  {
+    question: "Bietet Jimmy auch Hilfe bei der Bewerbung?",
+    answer: "Ja! Wir geben dir Tipps, wie du im Gespräch überzeugst, und unterstützen dich bei Bedarf mit Bewerbungshilfen. Außerdem bieten wir dir über Partner Zugang zu weiterführenden Informationen – auch für Praktika oder Bewerbertrainings."
+  }
+];
 
   return (
     <div className="min-h-screen bg-background">
@@ -133,7 +133,7 @@ const FAQSchueler = () => {
                   <div className="text-center">
                     <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">E-Mail Support</h3>
-                    <p className="text-muted-foreground mb-4">support@jimmy-portal.de</p>
+                    <p className="text-muted-foreground mb-4">kontakt@jimmy-marken.de</p>
                     <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
                       E-Mail schreiben
                     </Button>
