@@ -1,3 +1,4 @@
+
 import { ModernHeader } from '@/components/modern/ModernHeader';
 import Footer from '@/components/Footer';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -129,7 +130,7 @@ const faqItems = [
                     zögere nicht, uns zu kontaktieren. Unser Support-Team hilft dir gerne weiter!
                   </p>
                 </CardHeader>
-                <CardContent className="grid md:grid-cols-2 gap-8">
+                <CardContent className="flex justify-center">
                   <div className="text-center">
                     <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">E-Mail Support</h3>
@@ -138,7 +139,6 @@ const faqItems = [
                       E-Mail schreiben
                     </Button>
                   </div>
-
                 </CardContent>
               </Card>
             </motion.div>
