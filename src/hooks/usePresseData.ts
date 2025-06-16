@@ -25,7 +25,7 @@ export const usePresseData = () => {
   useEffect(() => {
     const fetchPresseData = async () => {
       try {
-        const response = await fetch('https://jimmy-marken.de/presse_api.php');
+        const response = await fetch('https://jimmy-ausbildung.de/api/presse_api.php');
         
         if (!response.ok) {
           throw new Error('Fehler beim Laden der Daten');
