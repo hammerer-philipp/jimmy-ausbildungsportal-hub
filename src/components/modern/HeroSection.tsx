@@ -180,7 +180,7 @@ export const HeroSection = () => {
                               className="absolute inset-0 rounded-[2rem] overflow-hidden"
                             >
                               <img 
-                                src="/lovable-uploads/c39fab07-5064-4f44-adf1-1afe5283f533.png" 
+                                src="/icon/login.png" 
                                 alt="Jimmy Login Screen"
                                 className="w-full h-full object-cover"
                               />
@@ -198,7 +198,7 @@ export const HeroSection = () => {
                               className="absolute inset-0 rounded-[2rem] overflow-hidden"
                             >
                               <img 
-                                src="/lovable-uploads/69ba809c-ac86-40fa-ab27-8a77d16523ff.png" 
+                                src="/icon/interview.png" 
                                 alt="Jimmy Jobinterview Screen"
                                 className="w-full h-full object-cover"
                               />
@@ -216,7 +216,7 @@ export const HeroSection = () => {
                               className="absolute inset-0 rounded-[2rem] overflow-hidden"
                             >
                               <img 
-                                src="/lovable-uploads/fd22411e-071f-4658-913d-24e9866ce1f9.png" 
+                                src="/icon/chat.png" 
                                 alt="Bewerbungs-Chat Screen"
                                 className="w-full h-full object-cover"
                               />
