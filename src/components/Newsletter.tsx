@@ -35,7 +35,7 @@ const Newsletter = () => {
     setIsLoading(true);
     
     try {
-      const response = await fetch('https://jimmy-marken.de/newsletter_api.php', {
+      const response = await fetch('https://jimmy-ausbildung.de/newsletter_api.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
