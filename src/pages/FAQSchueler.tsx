@@ -10,7 +10,7 @@ const FAQSchueler = () => {
 const faqItems = [
   {
     question: "Wie funktioniert Jimmy für Schüler?",
-    answer: "Als Schüler brauchst du kein eigenes Profil anzulegen. Du absolvierst lediglich ein kurzes Online-Interview. Dieses wird gespeichert und anonymisiert Unternehmen zur Verfügung gestellt. Die Unternehmen melden sich bei dir, wenn dein Profil zu ihrer Ausbildung passt – du musst dich also um nichts kümmern."
+    answer: "Du absolvierst ein kurzes Chatbot-Interview mit Jimmy. Dieses wird gespeichert und anonymisiert Unternehmen zur Verfügung gestellt. Die Unternehmen melden sich bei dir, wenn dein Profil zu ihrer Ausbildung passt – du musst dich also um nichts kümmern."
   },
   {
     question: "Ist Jimmy wirklich kostenlos für Schüler?",
@@ -18,11 +18,11 @@ const faqItems = [
   },
   {
     question: "Welche Informationen muss ich in mein Profil eingeben?",
-    answer: "Du gibst keine klassischen Profildaten ein. Stattdessen beantwortest du Fragen in einem digitalen Interview – etwa zu deinen Interessen, Stärken und Berufsvorstellungen. Diese Infos nutzt Jimmy, um dich Unternehmen anonym vorzuschlagen."
+    answer: "Du gibst keine klassischen Profildaten ein. Stattdessen beantwortest du Fragen in einem digitalen Interview – etwa zu deinen Interessen, Stärken und Berufsvorstellungen. Diese Infos nutzt Jimmy, um dich Unternehmen vorzuschlagen."
   },
   {
     question: "Wie schnell erhalte ich Bewerbungen von Unternehmen?",
-    answer: "Das hängt davon ab, wie gut dein Interview zu den Anforderungen der Unternehmen passt. Viele Schüler erhalten schon nach wenigen Tagen erste Anfragen – bei besonders gefragten Profilen geht es oft noch schneller."
+    answer: "Das hängt davon ab, wie gut dein Interview zu den Anforderungen der Unternehmen passt. Es kann wenige Stunden bis hin zu mehreren Tagen dauern."
   },
   {
     question: "Kann ich auch nach spezifischen Ausbildungsberufen suchen?",
@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     question: "Was passiert, wenn mir eine Bewerbung gefällt?",
-    answer: "Wenn dir ein Unternehmen gefällt, kannst du den Kontakt aktiv freigeben. Danach bekommst du dessen Kontaktdaten und kannst direkt in die Bewerbung oder ein Kennenlerngespräch einsteigen."
+    answer: "Wenn dir ein Unternehmen gefällt, kannst du den Kontakt ausbauen, so kannst du mehr über den Beruf erfahren und zu einem Kennenlerngespräch eingeladen werden."
   },
   {
     question: "Kann ich mein Interview später nochmal machen?",
@@ -38,11 +38,11 @@ const faqItems = [
   },
   {
     question: "Wie schützt Jimmy meine Daten?",
-    answer: "Jimmy schützt deine Daten nach aktuellen DSGVO-Standards. Unternehmen sehen deine Informationen nur anonymisiert – bis du dich aktiv für den Kontakt entscheidest. Du bestimmst also, wer was über dich erfährt."
+    answer: "Jimmy schützt deine Daten nach aktuellen DSGVO-Standards."
   },
   {
     question: "Gibt es eine Mindestaltersgrenze?",
-    answer: "Ja, du solltest mindestens 15 Jahre alt sein, um das Interview absolvieren zu können. Wenn du unter 18 bist, brauchst du die Zustimmung deiner Eltern."
+    answer: "Ja, du solltest mindestens 14 Jahre alt sein, um das Interview absolvieren zu können. Wenn du unter 18 bist, brauchst du die Zustimmung deiner Eltern."
   },
   {
     question: "Kann ich mehrere Ausbildungsrichtungen angeben?",
@@ -50,11 +50,11 @@ const faqItems = [
   },
   {
     question: "Was ist, wenn ich bereits einen Ausbildungsplatz gefunden habe?",
-    answer: "Dann freuen wir uns für dich! Dein Interview bleibt zwar im System, wird aber automatisch als 'nicht verfügbar' markiert. Du bekommst dann keine neuen Anfragen mehr."
+    answer: "Dann freuen wir uns für dich! Aber beachte: Dein Interview bleibt im System,du musst es selbstständig löschen. "
   },
   {
     question: "Bietet Jimmy auch Hilfe bei der Bewerbung?",
-    answer: "Ja! Wir geben dir Tipps, wie du im Gespräch überzeugst, und unterstützen dich bei Bedarf mit Bewerbungshilfen. Außerdem bieten wir dir über Partner Zugang zu weiterführenden Informationen – auch für Praktika oder Bewerbertrainings."
+    answer: "Ja! Wir geben dir Tipps, wie du im Gespräch überzeugst, und unterstützen dich bei Bedarf mit Bewerbungshilfen. Schau doch dafür einfach in unserem Blog oder auf unseren Socialmedia-Kanälen vorbei."
   }
 ];
 
@@ -133,16 +133,13 @@ const faqItems = [
                   <div className="text-center">
                     <Mail className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">E-Mail Support</h3>
-                    <p className="text-muted-foreground mb-4">kontakt@jimmy-marken.de</p>
+                    <p className="text-muted-foreground mb-4">kontakt@jimmy-ausbildung.de</p>
                     <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
                       E-Mail schreiben
                     </Button>
                   </div>
                   <div className="text-center">
                     <Phone className="w-8 h-8 text-jimmy-gold mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Telefon Support</h3>
-                    <p className="text-muted-foreground mb-2">+49 (0) 123 456789</p>
-                    <p className="text-sm text-muted-foreground mb-4">Mo-Fr: 9:00 - 17:00 Uhr</p>
                     <Button variant="outline" className="border-jimmy-gold text-jimmy-gold hover:bg-jimmy-gold hover:text-jimmy-header">
                       Anrufen
                     </Button>
